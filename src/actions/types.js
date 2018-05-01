@@ -1,1 +1,1 @@
-export const TYPE = 'TYPE'
+export const FETCH_WEATHER = 'FETCH_WEATHER'
