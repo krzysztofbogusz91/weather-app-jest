@@ -4,16 +4,10 @@ import { doSomething}  from '../actions/index';
 
 
 
-class App extends Component {
-  componentDidMount(){
-    this.props.doSomething("data")
-  }
-
-  render() {
-    
-    console.log(this.props.result)
-    return (
-        <div >
+export class App extends Component {
+    render() {
+        return (
+        <div className={'main container'} >
         APP
         </div>
     );
@@ -22,7 +16,7 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   ...state
- })
+ });
 
-
+//just temporally for manual tests, than just remove and export just app for test
 export default connect(mapStateToProps, { doSomething } )(App);

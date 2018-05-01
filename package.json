@@ -21,7 +21,8 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/registerServiceWorker.js",
-      "!src/index.js"
+      "!src/index.js",
+      "!src/store.js"
     ]
   },
   "devDependencies": {
