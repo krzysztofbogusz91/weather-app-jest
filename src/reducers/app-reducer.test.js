@@ -7,7 +7,5 @@ it('should sets empty state when no action', () =>{
 });
 
 it('should sets state to have result property on action TYPE', () =>{
-
-   // console.log(appReducer(undefined, {type: types.TYPE }) )
     expect( appReducer(undefined,{type: types.TYPE }) ).toEqual({result: undefined})
 });
