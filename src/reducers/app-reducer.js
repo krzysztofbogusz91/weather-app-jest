@@ -6,8 +6,19 @@ export default (state={}, action) => {
         case types.FETCH_WEATHER:
             return {
                 ...state,
-                result: action.payload
+                today: action.payload
             }
+        case types.FETCH_FORECAST:{
+            return {
+                ...state,
+                weather: action.payload
+            }
+        }    
+        case types.USER_CORDS:
+            return{
+                ...state,
+                cords: action.payload
+            }    
         default:
             return state
     }

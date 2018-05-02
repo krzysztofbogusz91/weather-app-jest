@@ -3,11 +3,12 @@ import * as types from './types';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import { fetchWeather, fetchUser } from "./index";
+import { fetchWeather, fetchUser, fetchForecast } from "./index";
 
 
 const createMockStore = configureMockStore([thunk]);
 const store = createMockStore({ data: {} });
+fetchMock.config.overwriteRoutes = true;
 
 describe('fetchWeather', () => {
     beforeEach(() => {
@@ -30,19 +31,11 @@ describe('fetchWeather', () => {
             type: types.FETCH_WEATHER
         }];
 
-        return store.dispatch(fetchWeather()).then((res) => {
-
+        return store.dispatch(fetchWeather()).then(() => {
             expect(store.getActions()).toEqual(expected)
         })
 
-    });
-
-    
-});
-
-describe('Test reject api', () => {
-    //alows differnt responses from same api   
-    fetchMock.config.overwriteRoutes = true;
+    }); 
 
     it('tests err', () => {
         //set new response form server
@@ -62,13 +55,62 @@ describe('Test reject api', () => {
             expect(store.getActions()).not.toEqual(expected)
         }
         );
+    }); 
+});
 
+describe('getForecast', () => {
+    beforeEach(() => {
+        store.clearActions()
+    });
+    afterEach(() => {
+        fetchMock.restore();
     });
 
-    
+   
+
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${54}&lon=${55}&appid=54df0301d1505a0aee49fe3b417ecd92`
+
+    it('creates an async action to fetch', () => {
+        const mockResponse = { data: [{ weather: 'sunshine!' },{ weather: 'rain!' }] };
+
+        fetchMock.get(url, mockResponse)
+
+        const expected = [{
+            payload: {
+                data: mockResponse.data
+            },
+            type: types.FETCH_FORECAST
+        }];
+
+        return store.dispatch(fetchForecast()).then(() => {
+            expect(store.getActions()).toEqual(expected)
+        })
+
+    }); 
+
+    it('tests err', () => {
+        //set new response form server
+        const mockResponse = { status: 404 };
+        fetchMock.get(url, mockResponse)
+
+        const expected = [{
+            payload: {
+                data: mockResponse.data
+            },
+            type: types.FETCH_FORECAST
+        }];
+
+        return store.dispatch(fetchForecast()).then(() => {
+            //response should not match expected (resp.status 404) 
+            expect(store.getActions()).not.toEqual(expected)
+        }
+        );
+    }); 
+
 });
 
 describe('getUserCords', () => {
+    const url = 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB0jxnnSPREDEgoCvskYDxjJPJ2nSAzDaA';
     beforeEach(() => {
         store.clearActions()
     });
@@ -77,17 +119,16 @@ describe('getUserCords', () => {
     });
     
     it('call api and get user coords', () => {
-        const mockResponse = { lat: "36.24", lon:"-124.32" };
+        const mockResponse = { location: { lat: "36.24", lon:"-124.32" } };
 
-        fetchMock.get(`http://ip-api.com/json`, mockResponse)
+        fetchMock.post(url, mockResponse)
 
         const expected = [{
-            payload: mockResponse,
+            payload: mockResponse.location,
             type: types.USER_CORDS
         }];
 
         return store.dispatch(fetchUser()).then(() => {
-
             expect(store.getActions()).toEqual(expected)
         })
     });
@@ -95,7 +136,7 @@ describe('getUserCords', () => {
     it('call api and gets error ', () => {
         const mockResponse = { status: 404 };
 
-        fetchMock.get(`http://ip-api.com/json`, mockResponse)
+        fetchMock.post(url, mockResponse)
 
         const expected = [{
             payload: mockResponse,
