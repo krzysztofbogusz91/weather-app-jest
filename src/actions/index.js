@@ -10,11 +10,10 @@ export const fetchWeather = () => dispatch =>{
    return fetch(url)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             dispatch({
                 type: types.FETCH_WEATHER,
                 payload: data
             })}
-        ).catch(err => console.log(err));
+        ).catch(err => err );
 
 }
