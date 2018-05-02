@@ -17,3 +17,19 @@ export const fetchWeather = () => dispatch =>{
         ).catch(err => err );
 
 }
+
+export const fetchUser = () => dispatch =>{
+
+    
+    const url = `http://ip-api.com/json`;
+
+   return fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            dispatch({
+                type: types.USER_CORDS,
+                payload: data
+            })}
+        ).catch(err => err );
+
+}

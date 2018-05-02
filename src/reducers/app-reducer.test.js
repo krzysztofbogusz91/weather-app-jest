@@ -12,6 +12,6 @@ it('should test passing wrong type=> should return default from switch', () =>{
 it('should return new data with prev state', () => {
     const state = {data: "lala"}
     const output = {...state, result: undefined}
-    expect( appReducer(state, {type: types.TYPE }) ).toEqual(output)
+    expect( appReducer(state, {type: types.FETCH_WEATHER }) ).toEqual(output)
 
 });
