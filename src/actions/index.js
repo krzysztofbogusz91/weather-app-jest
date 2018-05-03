@@ -1,19 +1,14 @@
 import * as types from './types';
 import { term } from '../helpers/check_search';
 
-// const term = (data) => {
-//     console.log(typeof data)
-//     //modify search query depending on data type
-//     return typeof data === "string" ? `q=${data}` : `lat=${data.lat}&lon=${data.lng}`;   
-// }
 
 const API_KEY = '54df0301d1505a0aee49fe3b417ecd92';
+const urlMain = `https://api.openweathermap.org/data/2.5/`
 
 export const fetchWeather = data => dispatch =>{
    
-   // const search = typeof data === "string" ? `q=${data}` : `lat=${data.lat}&lon=${data.lng}`
     let search = term(data);
-    const url = `https://api.openweathermap.org/data/2.5/weather?${search}&appid=${API_KEY}`;
+    const url = `${urlMain}weather?${search}&appid=${API_KEY}`;
 
    return fetch(url)
         .then(res => res.json())
@@ -23,14 +18,12 @@ export const fetchWeather = data => dispatch =>{
                 payload: data
             })}
         ).catch(err => err );
-
 }
-
 
 export const fetchForecast = data => dispatch =>{
 
     let search = term(data);
-    const url = `https://api.openweathermap.org/data/2.5/forecast?${search}&appid=${API_KEY}`;
+    const url = `${urlMain}forecast?${search}&appid=${API_KEY}`;
 
    return fetch(url)
         .then(res => res.json())
@@ -40,7 +33,6 @@ export const fetchForecast = data => dispatch =>{
                 payload: data
             })}
         ).catch(err => err );
-
 }
 
 export const fetchUser = () => dispatch =>{
@@ -67,5 +59,4 @@ export const fetchUser = () => dispatch =>{
                 })}
             ).catch(err => err );
     //   } end if else
-
 }
