@@ -5,14 +5,12 @@ import Current from "./Current";
 
 
 
-
-
 export class App extends Component {
     componentDidMount() {
    
-     this.props.fetchUser()
-     this.props.fetchForecast()
-     this.props.fetchWeather()
+    //  this.props.fetchUser()
+    this.props.fetchForecast({lat:30,lng:40})
+     this.props.fetchWeather("london,uk");
     }
     render() {
         console.log(this.props)

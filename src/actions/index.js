@@ -1,11 +1,18 @@
 import * as types from './types';
+import { term } from '../helpers/check_search';
 
+// const term = (data) => {
+//     console.log(typeof data)
+//     //modify search query depending on data type
+//     return typeof data === "string" ? `q=${data}` : `lat=${data.lat}&lon=${data.lng}`;   
+// }
 
 const API_KEY = '54df0301d1505a0aee49fe3b417ecd92';
 
-export const fetchWeather = () => dispatch =>{
-
-    let search =`lat=${54}&lon=${55}`
+export const fetchWeather = data => dispatch =>{
+   
+   // const search = typeof data === "string" ? `q=${data}` : `lat=${data.lat}&lon=${data.lng}`
+    let search = term(data);
     const url = `https://api.openweathermap.org/data/2.5/weather?${search}&appid=${API_KEY}`;
 
    return fetch(url)
@@ -20,9 +27,9 @@ export const fetchWeather = () => dispatch =>{
 }
 
 
-export const fetchForecast = () => dispatch =>{
+export const fetchForecast = data => dispatch =>{
 
-    let search =`lat=${54}&lon=${55}`
+    let search = term(data);
     const url = `https://api.openweathermap.org/data/2.5/forecast?${search}&appid=${API_KEY}`;
 
    return fetch(url)
@@ -43,7 +50,6 @@ export const fetchUser = () => dispatch =>{
     //     console.log('geo yes')
     //     navigator.geolocation.getCurrentPosition((pos)=>{
     //         const crd = pos.coords
-            
     //         dispatch({type: types.USER_CORDS, payload: {lat: crd.latitude, lng: crd.longitude} })
     //     });
     //   } else {

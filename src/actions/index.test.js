@@ -4,6 +4,8 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import { fetchWeather, fetchUser, fetchForecast } from "./index";
+import { term } from '../helpers/check_search';
+
 
 
 const createMockStore = configureMockStore([thunk]);
@@ -18,11 +20,14 @@ describe('fetchWeather', () => {
         fetchMock.restore();
     });
 
+    const searchTerm = `lat=${54}&lon=${55}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?${searchTerm}&appid=54df0301d1505a0aee49fe3b417ecd92`;
 
     it('creates an async action to fetch', () => {
         const mockResponse = { data: { weather: 'sunshine!' } };
-
-        fetchMock.get(`https://api.openweathermap.org/data/2.5/weather?lat=${54}&lon=${55}&appid=54df0301d1505a0aee49fe3b417ecd92`, mockResponse)
+        const searchTerm = `lat=${54}&lon=${55}`;
+        
+        fetchMock.get(url, mockResponse)
 
         const expected = [{
             payload: {
@@ -30,8 +35,8 @@ describe('fetchWeather', () => {
             },
             type: types.FETCH_WEATHER
         }];
-
-        return store.dispatch(fetchWeather()).then(() => {
+        let search = {lat: 54, lng: 55}
+        return store.dispatch(fetchWeather(search)).then(() => {
             expect(store.getActions()).toEqual(expected)
         })
 
@@ -40,7 +45,7 @@ describe('fetchWeather', () => {
     it('tests err', () => {
         //set new response form server
         const mockResponse = { status: 404 };
-        fetchMock.get(`https://api.openweathermap.org/data/2.5/weather?lat=${54}&lon=${55}&appid=54df0301d1505a0aee49fe3b417ecd92`, mockResponse)
+        fetchMock.get(url, mockResponse)
 
         //expected response form passing call
         const expected = [{
@@ -49,8 +54,8 @@ describe('fetchWeather', () => {
             },
             type: types.FETCH_WEATHER
         }];
-
-        return store.dispatch(fetchWeather()).then(() => {
+        let search = {lat: 54, lng: 55}
+        return store.dispatch(fetchWeather(search)).then(() => {
             //response should not match expected (resp.status 404) 
             expect(store.getActions()).not.toEqual(expected)
         }
@@ -68,7 +73,7 @@ describe('getForecast', () => {
 
    
 
-    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${54}&lon=${55}&appid=54df0301d1505a0aee49fe3b417ecd92`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=54&lon=55&appid=54df0301d1505a0aee49fe3b417ecd92`
 
     it('creates an async action to fetch', () => {
         const mockResponse = { data: [{ weather: 'sunshine!' },{ weather: 'rain!' }] };
@@ -82,7 +87,8 @@ describe('getForecast', () => {
             type: types.FETCH_FORECAST
         }];
 
-        return store.dispatch(fetchForecast()).then(() => {
+        let search = {lat: 54, lng: 55}
+        return store.dispatch(fetchForecast(search)).then(() => {
             expect(store.getActions()).toEqual(expected)
         })
 
@@ -100,7 +106,8 @@ describe('getForecast', () => {
             type: types.FETCH_FORECAST
         }];
 
-        return store.dispatch(fetchForecast()).then(() => {
+        let search = {lat: 54, lng: 55}
+        return store.dispatch(fetchForecast(search)).then(() => {
             //response should not match expected (resp.status 404) 
             expect(store.getActions()).not.toEqual(expected)
         }
