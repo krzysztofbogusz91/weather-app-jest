@@ -20,7 +20,6 @@ describe('Current connect', () => {
         <Current store={store} />
     );
     it('should have props, same as initialState', () => {
-        console.log(store.getState())
         expect(store.getState()).toEqual(initialState)
     });
 

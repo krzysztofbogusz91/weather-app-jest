@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchWeather, fetchUser, fetchForecast }  from '../actions/index';
+import { Table } from '../containers/Table';
+
 
 export class Current extends Component {
     state = {
@@ -16,28 +18,30 @@ export class Current extends Component {
         this.setState({
             search: e.target.value
         })
-        // this.props.fetchUser()
-        // if( this.props.cords !== undefined ){
-        //     const cord = this.props.cords;
-        //     this.props.fetchForecast(cord)
-        //     this.props.fetchWeather(cord);
-        // } 
+       
+        if( this.props.cords !== undefined ){
+            const cord = this.props.cords;
+            this.props.fetchForecast(cord)
+            this.props.fetchWeather(cord);
+        } 
     }
 
-
+    
     render() {
-       //console.log(this.props)
+        console.log(this.props)
         return (
-            <div>
-                <form 
-                    action="submit" 
-                 >
+            <div className="mt-5">
+                <form action="submit ">
                     <input
                         value={this.state.search}
                         onChange={this.inputChange}
                         type="text" 
-                        className='search-fetch'/>
+                        className='search-fetch form-control'/>
                 </form>
+                <div className='current-weather'>
+                    <Table type="today" table={this.props.today}/>
+                    <Table type="forecast" table={this.props.weather}/>
+                </div>
             </div>
         );
     }
@@ -52,8 +56,10 @@ Current.propTypes = {
     cords: PropTypes.any,
 };
 
-// const mapStateToProps = state => ({
-//     ...state
-//    });
+Current.defaultProps = {
+    today: [],
+    weather: [],
+    cords: {},
+}
 
 export default connect( state => ({...state}) , { fetchWeather, fetchUser, fetchForecast } )(Current);

@@ -23,7 +23,6 @@ describe('Current',()=>{
 
     it('should have initial empty state ', function () {
         const bar = current.find('.search-fetch');
-        //bar.simulate('change', {target:{value: ""}})
         expect(current.state().search).toEqual("");
     });
 
@@ -33,47 +32,39 @@ describe('Current',()=>{
         expect(current.state().search).toEqual("Lond");
     });
 
-    //no change 85.71
-    it('should call inputChage method', () => {
+    //NOT NECESSARY => just other way than above
+    it('should call inputChage method and c', () => {
         current.instance().inputChange({target:{value: "Lod"}})
         expect(current.state().search).toEqual("Lod");
     });
 
+    it('should have table showing current weather', () => {
+        expect(current.find('.current-weather').children().length).toEqual(2)
+    });
 
-    //no change 85.71
-    it('should have input', () => {
-        expect(current.find('.search-fetch').exists()).toBe(true)
-    });
-    //no change 85.71
-    it('should have form', () => {
-        expect(current.find('form').exists()).toBe(true)
-    });
+    // it('should have table showing current weather', () => {
+    //     expect(current.find('Table').exists()).toBe(true)
+    // });
+   
 
     describe('Mount Current', () => {
+        //NOT NECESSARY LEFT FOR FUTURE 
         const methodNameFake = jest.spyOn(Current.prototype, 'componentDidMount');
-        //const inputChangeFake = jest.spyOn(Current.prototype, 'inputChange');
+    
         const mountCurr = mount(<Current {...props} />)
         
-         //no change 85.71
-        // it('should have and called CDM method', () => {
-        //     expect(methodNameFake).toHaveBeenCalled();
-        // });
-         //no change 85.71
-        // it('should call fetchUser prop once', () => {
-        //     expect(mountCurr.props().fetchUser).toHaveBeenCalled();
-        // });
+        //NOT NESESERY LEFT FOR FUTURE 
+        it('should have and called CDM method', () => {
+            expect(methodNameFake).toHaveBeenCalled();
+        });
+         
+        it('should call fetchUser prop once', () => {
+            expect(mountCurr.props().fetchUser).toHaveBeenCalled();
+        });
 
-        // it('should not call fetchWeather prop once', () => {
-        //     expect(mountCurr.props().fetchWeather).not.toHaveBeenCalled();
-        // });
-
-        // it('should not call fetchForecast prop once', () => {
-        //     expect(mountCurr.props().fetchForecast).not.toHaveBeenCalled();
-        // });
-        //  //no change 85.71
-        // it('fetchUser should update props', () => {
-        //     expect(mountCurr.props().cords).not.toEqual({})
-        // });
+        it('fetchUser should update props', () => {
+            expect(mountCurr.props().cords).not.toEqual({})
+        });
 
 
     });
