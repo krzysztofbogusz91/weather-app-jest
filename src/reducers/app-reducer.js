@@ -1,17 +1,23 @@
 import * as types from '../actions/types';
 
+const initialState = {
+    cords: {},
+    weather: {},
+    today: {}
+  }
 
-export default (state={}, action) => {
+export default (state={...initialState}, action) => {
     switch (action.type) {
         case types.FETCH_WEATHER:
+        const {name, main, weather} = action.payload;
             return {
                 ...state,
-                today: action.payload
+                today: {name, main, weather}
             }
         case types.FETCH_FORECAST:{
             return {
                 ...state,
-                weather: action.payload
+                weather: action.payload.list
             }
         }    
         case types.USER_CORDS:

@@ -28,7 +28,7 @@ ShallowWrapper {
         action="submit"
 >
         <input
-                className="search-fetch input-group"
+                className="search-fetch"
                 onChange={[Function]}
                 type="text"
                 value=""
@@ -43,7 +43,7 @@ ShallowWrapper {
       "props": Object {
         "action": "submit",
         "children": <input
-          className="search-fetch input-group"
+          className="search-fetch"
           onChange={[Function]}
           type="text"
           value=""
@@ -55,7 +55,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "search-fetch input-group",
+          "className": "search-fetch",
           "onChange": [Function],
           "type": "text",
           "value": "",
@@ -78,7 +78,7 @@ ShallowWrapper {
           action="submit"
 >
           <input
-                    className="search-fetch input-group"
+                    className="search-fetch"
                     onChange={[Function]}
                     type="text"
                     value=""
@@ -93,7 +93,7 @@ ShallowWrapper {
         "props": Object {
           "action": "submit",
           "children": <input
-            className="search-fetch input-group"
+            className="search-fetch"
             onChange={[Function]}
             type="text"
             value=""
@@ -105,7 +105,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "search-fetch input-group",
+            "className": "search-fetch",
             "onChange": [Function],
             "type": "text",
             "value": "",

@@ -1,28 +1,61 @@
 import appReducer from './app-reducer';
 import * as types from '../actions/types'
 
-it('should sets empty state when no action', () =>{
-    expect( appReducer(undefined,{}) ).toEqual({})
+describe('appReducer', () => {
+  
+it('should set initial state when no action', () =>{
+    const state = {
+        cords: {},
+        weather: {},
+        today: {}
+      }
+    expect( appReducer(state,{}) ).toEqual(state)
 });
 
 it('should test passing wrong type=> should return default from switch', () =>{
-    expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual({})
+    const state = {
+        cords: {},
+        weather: {},
+        today: {}
+      }
+    expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual(state)
 });
 
 it('should return new data with prev state', () => {
-    const state = {data: "lala"}
-    const output = {...state, result: undefined}
-    expect( appReducer(state, {type: types.FETCH_WEATHER }) ).toEqual(output)
-
+    const state = {
+        cords: {},
+        weather: {},
+        today: {}
+      }
+    const result = {weather: "sunny", main: {}, name: {}}
+    const output = {...state, today:{ weather: result.weather, main:{}, name: {} } }
+  
+    expect( appReducer(state, {type: types.FETCH_WEATHER, payload: result }) ).toEqual(output)
 });
 
 it('should return state with cords', () => {
-    const output = {cords: undefined}
-    expect( appReducer(undefined, {type: types.USER_CORDS }) ).toEqual(output)
+    const state = {
+        cords: {},
+        weather: {},
+        today: {}
+      }
+    const output = {...state, cords: {lat: 45, lng: 45}}
+    expect( appReducer(state, {type: types.USER_CORDS, payload: output.cords}) ).toEqual(output)
 });
 
 it('should return state with weather arr', () => {
-    const output = {weather: undefined}
-    expect( appReducer(undefined, {type: types.FETCH_FORECAST }) ).toEqual(output)
+    const state = {
+        cords: {},
+        weather: {},
+        today: {}
+      }
+
+    const result = {list: ["sunny","rain"]}
+    const output = {...state, weather: result.list }
+
+    expect( appReducer(state, {type: types.FETCH_FORECAST, payload: result }) ).toEqual(output)
+
+});
+
 
 });

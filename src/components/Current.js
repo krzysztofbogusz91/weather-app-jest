@@ -9,14 +9,14 @@ export class Current extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchUser()
+            this.props.fetchUser()
         }
 
     inputChange = (e) =>{
         this.setState({
             search: e.target.value
         })
-        //MOVE TO BETTER METHOD JUST FOR TEST
+        // this.props.fetchUser()
         // if( this.props.cords !== undefined ){
         //     const cord = this.props.cords;
         //     this.props.fetchForecast(cord)
@@ -24,23 +24,36 @@ export class Current extends Component {
         // } 
     }
 
+
     render() {
+       //console.log(this.props)
         return (
             <div>
-                <form action="submit">
+                <form 
+                    action="submit" 
+                 >
                     <input
                         value={this.state.search}
-                        onChange={this.inputChange} type="text" className='search-fetch input-group'/>
+                        onChange={this.inputChange}
+                        type="text" 
+                        className='search-fetch'/>
                 </form>
             </div>
         );
     }
 }
 
-Current.propTypes = {};
+Current.propTypes = {
+    fetchWeather: PropTypes.func.isRequired,
+    fetchUser: PropTypes.func.isRequired,
+    fetchForecast: PropTypes.func.isRequired,
+    today: PropTypes.any,
+    weather: PropTypes.any,
+    cords: PropTypes.any,
+};
 
-const mapStateToProps = state => ({
-    ...state
-   });
+// const mapStateToProps = state => ({
+//     ...state
+//    });
 
-export default connect(mapStateToProps, { fetchWeather, fetchUser, fetchForecast } )(Current);
+export default connect( state => ({...state}) , { fetchWeather, fetchUser, fetchForecast } )(Current);
