@@ -1,0 +1,1155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should render properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    table={
+        Array [
+            Object {
+              "description": "clear sky",
+              "humidity": 45,
+              "icon": "01d",
+              "id": 800,
+              "main": "Clear",
+              "name": "2018-05-07 18:00:00",
+              "temp": 294.31,
+            },
+            Object {
+              "description": "clear sky",
+              "humidity": 45,
+              "icon": "01d",
+              "id": 800,
+              "main": "Clear",
+              "name": "2018-05-07 18:00:00",
+              "temp": 294.31,
+            },
+          ]
+    }
+    type="today"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <thead>
+          <tr>
+                    <th
+                              className="title"
+                              colSpan="5"
+                              scope="col"
+                    >
+                              CURRENT WEATHER
+                    </th>
+          </tr>
+          <tr>
+                    <th
+                              scope="col"
+                    >
+                              Name
+                    </th>
+                    <th
+                              scope="col"
+                    >
+                              Icon
+                    </th>
+                    <th
+                              scope="col"
+                    >
+                              Description
+                    </th>
+                    <th
+                              scope="col"
+                    >
+                              Temperature
+                    </th>
+                    <th
+                              scope="col"
+                    >
+                              Humidity
+                    </th>
+          </tr>
+</thead>,
+        <tbody
+          className="tbody-class"
+>
+          <tr>
+                    <td>
+                              2018-05-07 18:00:00
+                    </td>
+                    <td>
+                              clear sky
+                    </td>
+                    <td>
+                              <img
+                                        src="http://openweathermap.org/img/w/01d.png"
+                              />
+                    </td>
+                    <td>
+                               
+                              22 C
+                    </td>
+                    <td>
+                              45 %
+                                
+                    </td>
+          </tr>
+          <tr>
+                    <td>
+                              2018-05-07 18:00:00
+                    </td>
+                    <td>
+                              clear sky
+                    </td>
+                    <td>
+                              <img
+                                        src="http://openweathermap.org/img/w/01d.png"
+                              />
+                    </td>
+                    <td>
+                               
+                              22 C
+                    </td>
+                    <td>
+                              45 %
+                                
+                    </td>
+          </tr>
+</tbody>,
+      ],
+      "className": "table table-striped text-center table-bordered table-light mt-4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <tr>
+              <th
+                            className="title"
+                            colSpan="5"
+                            scope="col"
+              >
+                            CURRENT WEATHER
+              </th>
+</tr>,
+            <tr>
+              <th
+                            scope="col"
+              >
+                            Name
+              </th>
+              <th
+                            scope="col"
+              >
+                            Icon
+              </th>
+              <th
+                            scope="col"
+              >
+                            Description
+              </th>
+              <th
+                            scope="col"
+              >
+                            Temperature
+              </th>
+              <th
+                            scope="col"
+              >
+                            Humidity
+              </th>
+</tr>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <th
+                className="title"
+                colSpan="5"
+                scope="col"
+>
+                CURRENT WEATHER
+</th>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CURRENT WEATHER",
+                "className": "title",
+                "colSpan": "5",
+                "scope": "col",
+              },
+              "ref": null,
+              "rendered": "CURRENT WEATHER",
+              "type": "th",
+            },
+            "type": "tr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <th
+                  scope="col"
+>
+                  Name
+</th>,
+                <th
+                  scope="col"
+>
+                  Icon
+</th>,
+                <th
+                  scope="col"
+>
+                  Description
+</th>,
+                <th
+                  scope="col"
+>
+                  Temperature
+</th>,
+                <th
+                  scope="col"
+>
+                  Humidity
+</th>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Name",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "Name",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Icon",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "Icon",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Description",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "Description",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Temperature",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "Temperature",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Humidity",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "Humidity",
+                "type": "th",
+              },
+            ],
+            "type": "tr",
+          },
+        ],
+        "type": "thead",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <tr>
+              <td>
+                            2018-05-07 18:00:00
+              </td>
+              <td>
+                            clear sky
+              </td>
+              <td>
+                            <img
+                                          src="http://openweathermap.org/img/w/01d.png"
+                            />
+              </td>
+              <td>
+                             
+                            22 C
+              </td>
+              <td>
+                            45 %
+                              
+              </td>
+</tr>,
+            <tr>
+              <td>
+                            2018-05-07 18:00:00
+              </td>
+              <td>
+                            clear sky
+              </td>
+              <td>
+                            <img
+                                          src="http://openweathermap.org/img/w/01d.png"
+                            />
+              </td>
+              <td>
+                             
+                            22 C
+              </td>
+              <td>
+                            45 %
+                              
+              </td>
+</tr>,
+          ],
+          "className": "tbody-class",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "8002018-05-07 18:00:00",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <td>
+                  2018-05-07 18:00:00
+</td>,
+                <td>
+                  clear sky
+</td>,
+                <td>
+                  <img
+                                    src="http://openweathermap.org/img/w/01d.png"
+                  />
+</td>,
+                <td>
+                   
+                  22 C
+</td>,
+                <td>
+                  45 %
+                    
+</td>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2018-05-07 18:00:00",
+                },
+                "ref": null,
+                "rendered": "2018-05-07 18:00:00",
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "clear sky",
+                },
+                "ref": null,
+                "rendered": "clear sky",
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    src="http://openweathermap.org/img/w/01d.png"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "src": "http://openweathermap.org/img/w/01d.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "22 C",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "22 C",
+                ],
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "45 %",
+                    "  ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "45 %",
+                  "  ",
+                ],
+                "type": "td",
+              },
+            ],
+            "type": "tr",
+          },
+          Object {
+            "instance": null,
+            "key": "8012018-05-07 18:00:00",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <td>
+                  2018-05-07 18:00:00
+</td>,
+                <td>
+                  clear sky
+</td>,
+                <td>
+                  <img
+                                    src="http://openweathermap.org/img/w/01d.png"
+                  />
+</td>,
+                <td>
+                   
+                  22 C
+</td>,
+                <td>
+                  45 %
+                    
+</td>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2018-05-07 18:00:00",
+                },
+                "ref": null,
+                "rendered": "2018-05-07 18:00:00",
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "clear sky",
+                },
+                "ref": null,
+                "rendered": "clear sky",
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    src="http://openweathermap.org/img/w/01d.png"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "src": "http://openweathermap.org/img/w/01d.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "22 C",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "22 C",
+                ],
+                "type": "td",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "45 %",
+                    "  ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "45 %",
+                  "  ",
+                ],
+                "type": "td",
+              },
+            ],
+            "type": "tr",
+          },
+        ],
+        "type": "tbody",
+      },
+    ],
+    "type": "table",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <thead>
+            <tr>
+                        <th
+                                    className="title"
+                                    colSpan="5"
+                                    scope="col"
+                        >
+                                    CURRENT WEATHER
+                        </th>
+            </tr>
+            <tr>
+                        <th
+                                    scope="col"
+                        >
+                                    Name
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    Icon
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    Description
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    Temperature
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    Humidity
+                        </th>
+            </tr>
+</thead>,
+          <tbody
+            className="tbody-class"
+>
+            <tr>
+                        <td>
+                                    2018-05-07 18:00:00
+                        </td>
+                        <td>
+                                    clear sky
+                        </td>
+                        <td>
+                                    <img
+                                                src="http://openweathermap.org/img/w/01d.png"
+                                    />
+                        </td>
+                        <td>
+                                     
+                                    22 C
+                        </td>
+                        <td>
+                                    45 %
+                                      
+                        </td>
+            </tr>
+            <tr>
+                        <td>
+                                    2018-05-07 18:00:00
+                        </td>
+                        <td>
+                                    clear sky
+                        </td>
+                        <td>
+                                    <img
+                                                src="http://openweathermap.org/img/w/01d.png"
+                                    />
+                        </td>
+                        <td>
+                                     
+                                    22 C
+                        </td>
+                        <td>
+                                    45 %
+                                      
+                        </td>
+            </tr>
+</tbody>,
+        ],
+        "className": "table table-striped text-center table-bordered table-light mt-4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr>
+                <th
+                                className="title"
+                                colSpan="5"
+                                scope="col"
+                >
+                                CURRENT WEATHER
+                </th>
+</tr>,
+              <tr>
+                <th
+                                scope="col"
+                >
+                                Name
+                </th>
+                <th
+                                scope="col"
+                >
+                                Icon
+                </th>
+                <th
+                                scope="col"
+                >
+                                Description
+                </th>
+                <th
+                                scope="col"
+                >
+                                Temperature
+                </th>
+                <th
+                                scope="col"
+                >
+                                Humidity
+                </th>
+</tr>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <th
+                  className="title"
+                  colSpan="5"
+                  scope="col"
+>
+                  CURRENT WEATHER
+</th>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "CURRENT WEATHER",
+                  "className": "title",
+                  "colSpan": "5",
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": "CURRENT WEATHER",
+                "type": "th",
+              },
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <th
+                    scope="col"
+>
+                    Name
+</th>,
+                  <th
+                    scope="col"
+>
+                    Icon
+</th>,
+                  <th
+                    scope="col"
+>
+                    Description
+</th>,
+                  <th
+                    scope="col"
+>
+                    Temperature
+</th>,
+                  <th
+                    scope="col"
+>
+                    Humidity
+</th>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Name",
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": "Name",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Icon",
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": "Icon",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Description",
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": "Description",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Temperature",
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": "Temperature",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Humidity",
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": "Humidity",
+                  "type": "th",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "thead",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr>
+                <td>
+                                2018-05-07 18:00:00
+                </td>
+                <td>
+                                clear sky
+                </td>
+                <td>
+                                <img
+                                                src="http://openweathermap.org/img/w/01d.png"
+                                />
+                </td>
+                <td>
+                                 
+                                22 C
+                </td>
+                <td>
+                                45 %
+                                  
+                </td>
+</tr>,
+              <tr>
+                <td>
+                                2018-05-07 18:00:00
+                </td>
+                <td>
+                                clear sky
+                </td>
+                <td>
+                                <img
+                                                src="http://openweathermap.org/img/w/01d.png"
+                                />
+                </td>
+                <td>
+                                 
+                                22 C
+                </td>
+                <td>
+                                45 %
+                                  
+                </td>
+</tr>,
+            ],
+            "className": "tbody-class",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "8002018-05-07 18:00:00",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                    2018-05-07 18:00:00
+</td>,
+                  <td>
+                    clear sky
+</td>,
+                  <td>
+                    <img
+                                        src="http://openweathermap.org/img/w/01d.png"
+                    />
+</td>,
+                  <td>
+                     
+                    22 C
+</td>,
+                  <td>
+                    45 %
+                      
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2018-05-07 18:00:00",
+                  },
+                  "ref": null,
+                  "rendered": "2018-05-07 18:00:00",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "clear sky",
+                  },
+                  "ref": null,
+                  "rendered": "clear sky",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      src="http://openweathermap.org/img/w/01d.png"
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "src": "http://openweathermap.org/img/w/01d.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "22 C",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "22 C",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "45 %",
+                      "  ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "45 %",
+                    "  ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "8012018-05-07 18:00:00",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                    2018-05-07 18:00:00
+</td>,
+                  <td>
+                    clear sky
+</td>,
+                  <td>
+                    <img
+                                        src="http://openweathermap.org/img/w/01d.png"
+                    />
+</td>,
+                  <td>
+                     
+                    22 C
+</td>,
+                  <td>
+                    45 %
+                      
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2018-05-07 18:00:00",
+                  },
+                  "ref": null,
+                  "rendered": "2018-05-07 18:00:00",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "clear sky",
+                  },
+                  "ref": null,
+                  "rendered": "clear sky",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      src="http://openweathermap.org/img/w/01d.png"
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "src": "http://openweathermap.org/img/w/01d.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "22 C",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "22 C",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "45 %",
+                      "  ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "45 %",
+                    "  ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "tbody",
+        },
+      ],
+      "type": "table",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

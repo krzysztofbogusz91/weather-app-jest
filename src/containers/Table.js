@@ -2,10 +2,9 @@ import React from 'react';
 
 export const Table = (props) => {
     const isToday = props.type === "today";
-    const city = '';
-    const title = isToday ? "CURRENT WEATHER" : `FORECAST FOR ${city}`
+    const title = isToday ? 'CURRENT WEATHER' : `FORECAST FOR`
+
     const data = isToday ? "Name" : "Date";
- 
     const list = props.table.map((a,i) => {
         return (
             <tr key={a.id + i + a.name}>
@@ -31,10 +30,8 @@ export const Table = (props) => {
                     <th scope="col">Humidity</th>
                 </tr>
             </thead>
-            <tbody>
-
+            <tbody className='tbody-class'>
                 {list}
-
             </tbody>
         </table>
     );

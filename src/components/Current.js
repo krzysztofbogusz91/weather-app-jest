@@ -29,8 +29,17 @@ export class Current extends Component {
 
     componentDidMount() {
         this.setAll()
-
+      
+        //RELOAD EVERY 10 minutes? and store it all in Local storage?
+        // this.time = setTimeout(()=>{
+        //     this.setAll();
+        //     console.log('reload'); 
+        // },2000)
     }
+    //NOT SOLVING PROBLEM
+    // componentWillUnmount(){
+    //     this.setAll().abort()
+    // }
 
     inputChange = (e) => {
         this.setState({
@@ -40,7 +49,8 @@ export class Current extends Component {
     }
 
     tables() {
-       const weather = this.props.today.weather[0]
+        //reduce to avoid using [0]
+       const weather = this.props.today.weather.reduce((acc,bcc)=>acc.concat(bcc))
        weather.name = this.props.today.name;
        weather.temp = this.props.today.main.temp
        weather.humidity = this.props.today.main.humidity 
@@ -52,7 +62,7 @@ export class Current extends Component {
         weat.humidity = a.main.humidity
         return weat 
        })
-       console.log(forecast)
+       
         return (
             <div>
                 <Table type="today" table={[weather]} />
@@ -62,8 +72,8 @@ export class Current extends Component {
     }
 
     render() {
-        console.log(this.props)
-        //  console.log(this.state.showTable)
+        //console.log(this.props)
+        //console.log(this.state.showTable)
 
 
         return (
