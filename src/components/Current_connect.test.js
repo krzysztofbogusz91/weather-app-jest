@@ -11,7 +11,6 @@ const mockStore = configureMockStore();
 describe('Current connect', () => {
     let wrapper, store;
 
-
     const initialState = {
         today: {}, weather: {}, cords: {}
     };
@@ -22,9 +21,9 @@ describe('Current connect', () => {
     it('should have props, same as initialState', () => {
         expect(store.getState()).toEqual(initialState)
     });
-
     //TO DO => HOW TO TEST ACTIONS IN THAT CASE
     //FIX TEST COVERAGE BUT IS IT CORRECT?
+    //Generaly is, shows not coverd lines if if is present
     //LINK : https://jsramblings.com/2018/01/15/3-ways-to-test-mapStateToProps-and-mapDispatchToProps.html 
 });
 

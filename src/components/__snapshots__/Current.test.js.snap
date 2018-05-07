@@ -9,8 +9,8 @@ ShallowWrapper {
     fetchForecast={[Function]}
     fetchUser={[Function]}
     fetchWeather={[Function]}
-    today={Object {}}
-    weather={Object {}}
+    today={Array []}
+    weather={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -37,16 +37,7 @@ ShallowWrapper {
 </form>,
         <div
           className="current-weather"
->
-          <Unknown
-                    table={Object {}}
-                    type="today"
-          />
-          <Unknown
-                    table={Object {}}
-                    type="forecast"
-          />
-</div>,
+/>,
       ],
       "className": "mt-5",
     },
@@ -87,45 +78,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <Unknown
-              table={Object {}}
-              type="today"
-/>,
-            <Unknown
-              table={Object {}}
-              type="forecast"
-/>,
-          ],
+          "children": null,
           "className": "current-weather",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "table": Object {},
-              "type": "today",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "table": Object {},
-              "type": "forecast",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
+        "rendered": null,
         "type": "div",
       },
     ],
@@ -150,16 +107,7 @@ ShallowWrapper {
 </form>,
           <div
             className="current-weather"
->
-            <Unknown
-                        table={Object {}}
-                        type="today"
-            />
-            <Unknown
-                        table={Object {}}
-                        type="forecast"
-            />
-</div>,
+/>,
         ],
         "className": "mt-5",
       },
@@ -200,45 +148,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <Unknown
-                table={Object {}}
-                type="today"
-/>,
-              <Unknown
-                table={Object {}}
-                type="forecast"
-/>,
-            ],
+            "children": null,
             "className": "current-weather",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "table": Object {},
-                "type": "today",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "table": Object {},
-                "type": "forecast",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": "div",
         },
       ],
