@@ -36,24 +36,37 @@ export class Current extends Component {
         this.setState({
             search: e.target.value
         })
+    }
 
+    buttonOnClick = (e) =>{
+        e.preventDefault()
+        console.log('clicked')
+        const cord = this.state.search;
+        this.props.fetchForecast(cord)
+        this.props.fetchWeather(cord);
     }
 
     render() {
        //console.log(this.props)
-
         const length = this.props.weather.length > 0 && this.props.today.length > 0;
         //console.log(length)
 
         return (
             <div className="mt-5">
-                <form action="submit ">
+                <form action="submit">
                     <input
                         value={this.state.search}
                         onChange={this.inputChange}
                         type="text"
                         className='search-fetch form-control' />
+                        <button
+                            type="submit"
+                            className="mt-2 btn btn-info form-control search"
+                            onClick={this.buttonOnClick} >
+                            Search
+                            </button>
                 </form>
+
                 <div className='current-weather'>
                     {length ? 
                         <div>

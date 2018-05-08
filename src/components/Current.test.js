@@ -30,6 +30,14 @@ describe('Current', () => {
         expect(current.state().search).toEqual("Lond");
     });
 
+    it('should have search button', function () {
+        const button = current.find('.search');
+        
+        expect(button.exists()).toBe(true);
+    });
+
+  
+
     //NOT NECESSARY => just other way than above
     it('should call inputChage method and c', () => {
         current.instance().inputChange({ target: { value: "Lod" } })
@@ -52,6 +60,18 @@ describe('Mount Current', () => {
     it('should call fetchUser prop once', () => {
         expect(current.props().fetchUser).toHaveBeenCalled();
     });
+
+    it('On button click should call feches with search state', function () {
+        current.setState({
+            search: "Lond"
+        })
+        const button = current.find('.search').simulate('click');
+        
+        expect(current.props().fetchForecast).toHaveBeenCalledWith("Lond");
+        expect(current.props().fetchWeather).toHaveBeenCalledWith("Lond");
+    });
+
+
 
     it('fetchUser should update props', () => {
         expect(current.props().cords).not.toEqual({})
