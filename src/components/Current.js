@@ -33,23 +33,23 @@ export class Current extends Component {
 
 
     inputChange = (e) => {
+        //ADD INPUT VAIDATATION AND TESTS
         this.setState({
             search: e.target.value
         })
     }
 
     buttonOnClick = (e) =>{
+        //ADD SUBMIT VALIDATION AND TESTS
         e.preventDefault()
-        console.log('clicked')
         const cord = this.state.search;
         this.props.fetchForecast(cord)
         this.props.fetchWeather(cord);
     }
-
+    
     render() {
        //console.log(this.props)
         const length = this.props.weather.length > 0 && this.props.today.length > 0;
-        //console.log(length)
 
         return (
             <div className="mt-5">
@@ -59,13 +59,11 @@ export class Current extends Component {
                         onChange={this.inputChange}
                         type="text"
                         className='search-fetch form-control' />
-                        <button
-                            type="submit"
-                            className="mt-2 btn btn-info form-control search"
-                            onClick={this.buttonOnClick} >
+                        
+                        <button type="submit" className="mt-2 btn btn-info form-control search" onClick={this.buttonOnClick}>
                             Search
-                            </button>
-                </form>
+                        </button>
+                </ form>
 
                 <div className='current-weather'>
                     {length ? 
@@ -79,6 +77,7 @@ export class Current extends Component {
                         </div>
                         : null}
                 </div>
+
             </div>
         );
     }

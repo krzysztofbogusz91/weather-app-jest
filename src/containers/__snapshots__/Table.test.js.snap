@@ -85,6 +85,7 @@ ShallowWrapper {
                     </td>
                     <td>
                               <img
+                                        alt="icon"
                                         src="http://openweathermap.org/img/w/01d.png"
                               />
                     </td>
@@ -106,6 +107,7 @@ ShallowWrapper {
                     </td>
                     <td>
                               <img
+                                        alt="icon"
                                         src="http://openweathermap.org/img/w/01d.png"
                               />
                     </td>
@@ -316,6 +318,7 @@ ShallowWrapper {
               </td>
               <td>
                             <img
+                                          alt="icon"
                                           src="http://openweathermap.org/img/w/01d.png"
                             />
               </td>
@@ -337,6 +340,7 @@ ShallowWrapper {
               </td>
               <td>
                             <img
+                                          alt="icon"
                                           src="http://openweathermap.org/img/w/01d.png"
                             />
               </td>
@@ -368,6 +372,7 @@ ShallowWrapper {
 </td>,
                 <td>
                   <img
+                                    alt="icon"
                                     src="http://openweathermap.org/img/w/01d.png"
                   />
 </td>,
@@ -403,6 +408,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <img
+                    alt="icon"
                     src="http://openweathermap.org/img/w/01d.png"
 />,
                 },
@@ -412,6 +418,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "icon",
                     "src": "http://openweathermap.org/img/w/01d.png",
                   },
                   "ref": null,
@@ -479,6 +486,7 @@ ShallowWrapper {
 </td>,
                 <td>
                   <img
+                                    alt="icon"
                                     src="http://openweathermap.org/img/w/01d.png"
                   />
 </td>,
@@ -514,6 +522,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <img
+                    alt="icon"
                     src="http://openweathermap.org/img/w/01d.png"
 />,
                 },
@@ -523,6 +532,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "icon",
                     "src": "http://openweathermap.org/img/w/01d.png",
                   },
                   "ref": null,
@@ -639,6 +649,7 @@ ShallowWrapper {
                         </td>
                         <td>
                                     <img
+                                                alt="icon"
                                                 src="http://openweathermap.org/img/w/01d.png"
                                     />
                         </td>
@@ -660,6 +671,7 @@ ShallowWrapper {
                         </td>
                         <td>
                                     <img
+                                                alt="icon"
                                                 src="http://openweathermap.org/img/w/01d.png"
                                     />
                         </td>
@@ -870,6 +882,7 @@ ShallowWrapper {
                 </td>
                 <td>
                                 <img
+                                                alt="icon"
                                                 src="http://openweathermap.org/img/w/01d.png"
                                 />
                 </td>
@@ -891,6 +904,7 @@ ShallowWrapper {
                 </td>
                 <td>
                                 <img
+                                                alt="icon"
                                                 src="http://openweathermap.org/img/w/01d.png"
                                 />
                 </td>
@@ -922,6 +936,7 @@ ShallowWrapper {
 </td>,
                   <td>
                     <img
+                                        alt="icon"
                                         src="http://openweathermap.org/img/w/01d.png"
                     />
 </td>,
@@ -957,6 +972,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
+                      alt="icon"
                       src="http://openweathermap.org/img/w/01d.png"
 />,
                   },
@@ -966,6 +982,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "alt": "icon",
                       "src": "http://openweathermap.org/img/w/01d.png",
                     },
                     "ref": null,
@@ -1033,6 +1050,7 @@ ShallowWrapper {
 </td>,
                   <td>
                     <img
+                                        alt="icon"
                                         src="http://openweathermap.org/img/w/01d.png"
                     />
 </td>,
@@ -1068,6 +1086,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
+                      alt="icon"
                       src="http://openweathermap.org/img/w/01d.png"
 />,
                   },
@@ -1077,6 +1096,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "alt": "icon",
                       "src": "http://openweathermap.org/img/w/01d.png",
                     },
                     "ref": null,

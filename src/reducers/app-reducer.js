@@ -9,11 +9,9 @@ const initialState = {
 export default (state={...initialState}, action) => {
     switch (action.type) {
         case types.FETCH_WEATHER:
-        console.log()
-        const {temp, humidity} = action.payload.main
-        const {name, weather} = action.payload;
+        //creates object to pass as a props
+        const {name, main: {temp, humidity}} = action.payload;
         const {icon, description} = {...action.payload.weather[0]}
-        
             return {
                 ...state,
                 today: [{name, temp, humidity, icon, description}]

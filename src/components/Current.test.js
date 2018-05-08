@@ -37,7 +37,6 @@ describe('Current', () => {
     });
 
   
-
     //NOT NECESSARY => just other way than above
     it('should call inputChage method and c', () => {
         current.instance().inputChange({ target: { value: "Lod" } })
