@@ -59,28 +59,36 @@ describe('Mount Current', () => {
 
     it(' show table when weather length is > 0', () => {
         current.setProps({
+            today: [{
+                    description: "clear sky",
+                    humidity: 45,
+                    icon: "01d",
+                    main: "Clear",
+                    name: "Poznań",
+                    temp: 294.31
+                }],
             weather: [
                 {
-                    description:"clear sky",
-                    humidity:45,
-                    icon:"01d",
-                    id:800,
-                    main:"Clear",
-                    name:"2018-05-07 18:00:00",
-                    temp:294.31
+                    description: "clear sky",
+                    humidity: 45,
+                    icon: "01d",
+                    id: 800,
+                    main: "Clear",
+                    name: "2018-05-07 18:00:00",
+                    temp: 294.31
                 },
                 {
-                    description:"clear sky",
-                    humidity:45,
-                    icon:"01d",
-                    id:800,
-                    main:"Clear",
-                    name:"2018-05-07 18:00:00",
-                    temp:294.31
+                    description: "clear sky",
+                    humidity: 45,
+                    icon: "01d",
+                    id: 800,
+                    main: "Clear",
+                    name: "2018-05-07 18:00:00",
+                    temp: 294.31
                 },
             ]
         })
-      
+
         expect(current.find('.current-weather').children().length).toEqual(1)
     });
 

@@ -6,8 +6,8 @@ describe('appReducer', () => {
 it('should set initial state when no action', () =>{
     const state = {
         cords: {},
-        weather: {},
-        today: {}
+        weather: [],
+        today: []
       }
     expect( appReducer(state,{}) ).toEqual(state)
 });
@@ -15,8 +15,8 @@ it('should set initial state when no action', () =>{
 it('should test passing wrong type=> should return default from switch', () =>{
     const state = {
         cords: {},
-        weather: {},
-        today: {}
+        weather: [],
+        today: []
       }
     expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual(state)
 });
@@ -24,11 +24,11 @@ it('should test passing wrong type=> should return default from switch', () =>{
 it('should return new data with prev state', () => {
     const state = {
         cords: {},
-        weather: {},
-        today: {}
+        weather: [],
+        today: []
       }
-    const result = {weather: "sunny", main: {}, name: {}}
-    const output = {...state, today:[{ weather: result.weather, main:{}, name: {} }] }
+    const result = {weather: [{icon: "43", description:'des'}], main: {}, name: {}}
+    const output = {...state, today:[{ name: {}, temp: undefined, humidity: undefined, icon: "43", description: "des"}] }
   
     expect( appReducer(state, {type: types.FETCH_WEATHER, payload: result }) ).toEqual(output)
 });
@@ -50,8 +50,24 @@ it('should return state with weather arr', () => {
         today: {}
       }
 
-    const result = {list: [{main: undefined, name: undefined, weather: undefined}, {main: undefined, name: undefined, weather: undefined}]}
-    const output = {...state, weather: result.list }
+    const result = {
+        list: 
+            [
+                    {
+                    main:  {temp: "test", humidity: 50 } , 
+                    name: undefined,
+                    weather:[{description: "test", icon: "test"}]
+                }, 
+                {
+                    main:{temp: "test", humidity: 50 }, 
+                    name: undefined, 
+                    weather: [{description: "test", icon: "test"}]
+                }
+            ]
+        }
+
+
+    const output = {...state, weather: [{ name: undefined, temp: 'test', humidity: 50, icon: 'test', description: 'test'},{ name: undefined, temp: 'test', humidity: 50, icon: 'test', description: 'test'}] }
 
     expect( appReducer(state, {type: types.FETCH_FORECAST, payload: result }) ).toEqual(output)
 

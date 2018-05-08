@@ -39,34 +39,11 @@ export class Current extends Component {
 
     }
 
-    // tables() {
-    //     //reduce to avoid using [0]
-    //    const weather = this.props.today.weather.reduce((acc,bcc)=>acc.concat(bcc))
-    //    weather.name = this.props.today.name;
-    //    weather.temp = this.props.today.main.temp
-    //    weather.humidity = this.props.today.main.humidity 
-       
-    //    const forecast = this.props.weather.map(a =>{
-    //     const weat = a.weather[0];
-    //     weat.name = a.dt_txt;
-    //     weat.temp = a.main.temp
-    //     weat.humidity = a.main.humidity
-    //     return weat 
-    //    })
-       
-    //     return (
-    //         <div>
-    //             <Table type="today" table={[weather]} />
-    //             <Table type="forecast" table={forecast}/>
-    //         </div>
-    //     )
-    // }
-
     render() {
-        console.log(this.props)
-       
-        const length = this.props.weather.length > 0;
-        console.log(length)
+       //console.log(this.props)
+
+        const length = this.props.weather.length > 0 && this.props.today.length > 0;
+        //console.log(length)
 
         return (
             <div className="mt-5">
@@ -80,8 +57,12 @@ export class Current extends Component {
                 <div className='current-weather'>
                     {length ? 
                         <div>
-                        <Table type="today" table={[]} />
-                        <Table type="forecast" table={[]}/>
+                        <Table 
+                            type="today" 
+                            table={this.props.today} />
+                        <Table 
+                            type="forecast" 
+                            table={this.props.weather}/>
                         </div>
                         : null}
                 </div>

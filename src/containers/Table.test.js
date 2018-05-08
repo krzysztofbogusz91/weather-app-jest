@@ -11,8 +11,6 @@ describe('Table', () => {
             description:"clear sky",
             humidity:45,
             icon:"01d",
-            id:800,
-            main:"Clear",
             name:"2018-05-07 18:00:00",
             temp:294.31
         },
@@ -20,8 +18,6 @@ describe('Table', () => {
             description:"clear sky",
             humidity:45,
             icon:"01d",
-            id:800,
-            main:"Clear",
             name:"2018-05-07 18:00:00",
             temp:294.31
         },
@@ -42,7 +38,7 @@ describe('Table', () => {
         table.setProps({
             type: "forecast"
         })
-        expect(table.find('.title').text()).toEqual('FORECAST FOR')
+        expect(table.find('.title').text()).toEqual('FORECAST FOR NEXT 5 DAYS')
     });
 
     it('should have length of form rows as passed arr', () => {
