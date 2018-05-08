@@ -9,10 +9,8 @@ export class Current extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: "",
-            showTable: false
+            search: ""
         }
-
     }
 
     setAll = async () => {
@@ -20,10 +18,6 @@ export class Current extends Component {
         const cord = this.props.cords;
         await this.props.fetchForecast(cord)
         await this.props.fetchWeather(cord);
-        this.setState({
-            showTable: this.props.weather.length > 0 ? true : false
-        })
-
     }
 
 
@@ -36,10 +30,7 @@ export class Current extends Component {
         //     console.log('reload'); 
         // },2000)
     }
-    //NOT SOLVING PROBLEM
-    // componentWillUnmount(){
-    //     this.setAll().abort()
-    // }
+
 
     inputChange = (e) => {
         this.setState({
@@ -48,33 +39,34 @@ export class Current extends Component {
 
     }
 
-    tables() {
-        //reduce to avoid using [0]
-       const weather = this.props.today.weather.reduce((acc,bcc)=>acc.concat(bcc))
-       weather.name = this.props.today.name;
-       weather.temp = this.props.today.main.temp
-       weather.humidity = this.props.today.main.humidity 
+    // tables() {
+    //     //reduce to avoid using [0]
+    //    const weather = this.props.today.weather.reduce((acc,bcc)=>acc.concat(bcc))
+    //    weather.name = this.props.today.name;
+    //    weather.temp = this.props.today.main.temp
+    //    weather.humidity = this.props.today.main.humidity 
        
-       const forecast = this.props.weather.map(a =>{
-        const weat = a.weather[0];
-        weat.name = a.dt_txt;
-        weat.temp = a.main.temp
-        weat.humidity = a.main.humidity
-        return weat 
-       })
+    //    const forecast = this.props.weather.map(a =>{
+    //     const weat = a.weather[0];
+    //     weat.name = a.dt_txt;
+    //     weat.temp = a.main.temp
+    //     weat.humidity = a.main.humidity
+    //     return weat 
+    //    })
        
-        return (
-            <div>
-                <Table type="today" table={[weather]} />
-                <Table type="forecast" table={forecast}/>
-            </div>
-        )
-    }
+    //     return (
+    //         <div>
+    //             <Table type="today" table={[weather]} />
+    //             <Table type="forecast" table={forecast}/>
+    //         </div>
+    //     )
+    // }
 
     render() {
-        //console.log(this.props)
-        //console.log(this.state.showTable)
-
+        console.log(this.props)
+       
+        const length = this.props.weather.length > 0;
+        console.log(length)
 
         return (
             <div className="mt-5">
@@ -86,7 +78,12 @@ export class Current extends Component {
                         className='search-fetch form-control' />
                 </form>
                 <div className='current-weather'>
-                    {this.state.showTable ? this.tables() : null}
+                    {length ? 
+                        <div>
+                        <Table type="today" table={[]} />
+                        <Table type="forecast" table={[]}/>
+                        </div>
+                        : null}
                 </div>
             </div>
         );

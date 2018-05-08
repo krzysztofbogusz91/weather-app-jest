@@ -12,12 +12,20 @@ export default (state={...initialState}, action) => {
         const {name, main, weather} = action.payload;
             return {
                 ...state,
-                today: {name, main, weather}
+                today: [{name, main, weather}]
             }
         case types.FETCH_FORECAST:{
+
+            const myData = action.payload.list.map(a => {
+                const name = a.dt_txt;
+                const {main, weather} = a;
+                return {name, main, weather}
+            })
+           
             return {
                 ...state,
-                weather: action.payload.list
+                weather: myData
+                //action.payload.list
             }
         }    
         case types.USER_CORDS:

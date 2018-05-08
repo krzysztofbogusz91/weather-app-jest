@@ -28,7 +28,7 @@ it('should return new data with prev state', () => {
         today: {}
       }
     const result = {weather: "sunny", main: {}, name: {}}
-    const output = {...state, today:{ weather: result.weather, main:{}, name: {} } }
+    const output = {...state, today:[{ weather: result.weather, main:{}, name: {} }] }
   
     expect( appReducer(state, {type: types.FETCH_WEATHER, payload: result }) ).toEqual(output)
 });
@@ -50,7 +50,7 @@ it('should return state with weather arr', () => {
         today: {}
       }
 
-    const result = {list: ["sunny","rain"]}
+    const result = {list: [{main: undefined, name: undefined, weather: undefined}, {main: undefined, name: undefined, weather: undefined}]}
     const output = {...state, weather: result.list }
 
     expect( appReducer(state, {type: types.FETCH_FORECAST, payload: result }) ).toEqual(output)
