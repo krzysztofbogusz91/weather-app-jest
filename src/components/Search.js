@@ -30,15 +30,17 @@ export class Search extends Component {
         const cord = this.state.search;
         this.props.fetchForecast(cord)
         this.props.fetchWeather(cord);
+        //TODO find better solution to prevent on come back to this page having results form previous
         this.setState({
             renderTable: true
         })
     }
     
     render() {
-       console.log(this.props)
         const renderTable = this.state.renderTable;
-
+        //TODO => BEAKES WHEN COMIG BACK FROM PREVIOUS SITE: this.props.weather.length > 0 && this.props.today.length > 0;
+        //TODO => ADD ACTION TO CLEAR ALL TABLES
+        //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
                 <form action="submit">

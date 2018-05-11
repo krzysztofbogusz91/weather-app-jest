@@ -56,57 +56,13 @@ describe('Mount Search', () => {
 
     const search = mount(<Search {...props} />)
 
-
     it('On button click should call feches with search state', function () {
         search.setState({
             search: "Lond"
         })
         const button = search.find('.search').simulate('click');
-        
         expect(search.props().fetchForecast).toHaveBeenCalledWith("Lond");
         expect(search.props().fetchWeather).toHaveBeenCalledWith("Lond");
     });
-
-
-
-    // it('fetchUser should update props', () => {
-    //     expect(search.props().cords).not.toEqual({})
-    // });
-
-    // it(' show table when weather length is > 0', () => {
-    //     search.setProps({
-    //         today: [{
-    //                 description: "clear sky",
-    //                 humidity: 45,
-    //                 icon: "01d",
-    //                 main: "Clear",
-    //                 name: "Poznań",
-    //                 temp: 294.31
-    //             }],
-    //         weather: [
-    //             {
-    //                 description: "clear sky",
-    //                 humidity: 45,
-    //                 icon: "01d",
-    //                 id: 800,
-    //                 main: "Clear",
-    //                 name: "2018-05-07 18:00:00",
-    //                 temp: 294.31
-    //             },
-    //             {
-    //                 description: "clear sky",
-    //                 humidity: 45,
-    //                 icon: "01d",
-    //                 id: 800,
-    //                 main: "Clear",
-    //                 name: "2018-05-07 18:00:00",
-    //                 temp: 294.31
-    //             },
-    //         ]
-    //     })
-
-    //     expect(search.find('.search-weather').children().length).toEqual(1)
-    // });
-
 });
 

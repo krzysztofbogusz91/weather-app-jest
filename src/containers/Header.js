@@ -4,20 +4,30 @@ import { Link } from 'react-router-dom'
 export const Header = () =>{
     return(
         <div>
-            <header className="m-4 header">
-                <h1>WEATHER APP</h1>
+            <header className="m-4 header text-info text-center">
+                <h1 className="display-4">WEATHER APP</h1>
             </header>
-            <nav className="p-0 mt-4 navbar">
-                <ul className="nav nav-tabs d-flex w-100">
-                    <li className=" nav-item">
-                        <Link to="/" className="nav-link" href="#">
-                            Weather In Your Localisation
+            <nav className="mt-4 navbar navbar-expand-lg navbar-light bg-light">
+                <ul className="nav d-flex justify-content-between w-100">
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link text-info text-uppercase font-weight-bold" href="#">
+                           Local Weather 
                         </Link>
                     </li>
-                    <li className=" nav-item">
-                        <Link to="/search" className="nav-link" href="#">
+                    <li className="nav-item">
+                        <Link to="/search" className="nav-link text-info text-uppercase font-weight-bold" href="#">
                             Search Weather
                         </Link>
+                    </li>
+                    <li className="nav-item">
+                        <a href='#' className="nav-link text-info text-uppercase font-weight-bold" >
+                            My Weather
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href='#' className="nav-link text-info text-uppercase font-weight-bold" >
+                            Contact
+                        </a>
                     </li>
                 </ul>
             </nav>

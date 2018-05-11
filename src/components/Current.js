@@ -7,6 +7,7 @@ import { Table } from '../containers/Table';
 
 export class Current extends Component {
     setAll = async () => {
+        //TODO ADD ERROR HANDLING ON FETCH METHODS => AVOID ERRORS IN THE CONSOLE 
         await this.props.fetchUser();
         const cord = this.props.cords;
         await this.props.fetchForecast(cord);
@@ -17,7 +18,7 @@ export class Current extends Component {
     componentDidMount() {
         this.setAll()
       
-        //RELOAD EVERY 10 minutes? and store it all in Local storage?
+        //TODO RELOAD EVERY 10 minutes? and store it all in Local storage?
         // this.time = setTimeout(()=>{
         //     this.setAll();
         //     console.log('reload'); 
@@ -26,12 +27,12 @@ export class Current extends Component {
 
     render() {
        //console.log(this.props)
-        const length = this.props.weather.length > 0 && this.props.today.length > 0;
+        const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
 
         return (
             <div className="mt-5">
                 <div className='current-weather'>
-                    {length ? 
+                    {renderTable ? 
                         <div>
                         <Table 
                             type="today" 
