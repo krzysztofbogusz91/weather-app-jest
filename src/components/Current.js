@@ -6,17 +6,10 @@ import { Table } from '../containers/Table';
 
 
 export class Current extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            search: ""
-        }
-    }
-
     setAll = async () => {
-        await this.props.fetchUser()
+        await this.props.fetchUser();
         const cord = this.props.cords;
-        await this.props.fetchForecast(cord)
+        await this.props.fetchForecast(cord);
         await this.props.fetchWeather(cord);
     }
 
@@ -31,40 +24,12 @@ export class Current extends Component {
         // },2000)
     }
 
-
-    inputChange = (e) => {
-        //ADD INPUT VAIDATATION AND TESTS
-        this.setState({
-            search: e.target.value
-        })
-    }
-
-    buttonOnClick = (e) =>{
-        //ADD SUBMIT VALIDATION AND TESTS
-        e.preventDefault()
-        const cord = this.state.search;
-        this.props.fetchForecast(cord)
-        this.props.fetchWeather(cord);
-    }
-    
     render() {
        //console.log(this.props)
         const length = this.props.weather.length > 0 && this.props.today.length > 0;
 
         return (
             <div className="mt-5">
-                <form action="submit">
-                    <input
-                        value={this.state.search}
-                        onChange={this.inputChange}
-                        type="text"
-                        className='search-fetch form-control' />
-                        
-                        <button type="submit" className="mt-2 btn btn-info form-control search" onClick={this.buttonOnClick}>
-                            Search
-                        </button>
-                </ form>
-
                 <div className='current-weather'>
                     {length ? 
                         <div>
@@ -77,7 +42,6 @@ export class Current extends Component {
                         </div>
                         : null}
                 </div>
-
             </div>
         );
     }

@@ -12,10 +12,6 @@ describe('App',()=>{
     it('renders without crashing', () => {
         expect(app).toMatchSnapshot();
     });
-
-    it('Contain Current component', () => {
-        expect(app.find("Connect(Current)").exists() ).toBe(true);
-    });
 })
 
 

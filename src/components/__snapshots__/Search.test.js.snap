@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Search
+    cords={Object {}}
+    fetchForecast={[Function]}
+    fetchUser={[Function]}
+    fetchWeather={[Function]}
+    today={Array []}
+    weather={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <form
+          action="submit"
+>
+          <input
+                    className="search-fetch form-control"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+          />
+          <button
+                    className="mt-2 btn btn-info form-control search"
+                    onClick={[Function]}
+                    type="submit"
+          >
+                    Search
+          </button>
+</form>,
+        <div
+          className="current-weather"
+/>,
+      ],
+      "className": "mt-5",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "action": "submit",
+          "children": Array [
+            <input
+              className="search-fetch form-control"
+              onChange={[Function]}
+              type="text"
+              value=""
+/>,
+            <button
+              className="mt-2 btn btn-info form-control search"
+              onClick={[Function]}
+              type="submit"
+>
+              Search
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "search-fetch form-control",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Search",
+              "className": "mt-2 btn btn-info form-control search",
+              "onClick": [Function],
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": null,
+          "className": "current-weather",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <form
+            action="submit"
+>
+            <input
+                        className="search-fetch form-control"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+            />
+            <button
+                        className="mt-2 btn btn-info form-control search"
+                        onClick={[Function]}
+                        type="submit"
+            >
+                        Search
+            </button>
+</form>,
+          <div
+            className="current-weather"
+/>,
+        ],
+        "className": "mt-5",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "action": "submit",
+            "children": Array [
+              <input
+                className="search-fetch form-control"
+                onChange={[Function]}
+                type="text"
+                value=""
+/>,
+              <button
+                className="mt-2 btn btn-info form-control search"
+                onClick={[Function]}
+                type="submit"
+>
+                Search
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "search-fetch form-control",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search",
+                "className": "mt-2 btn btn-info form-control search",
+                "onClick": [Function],
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": null,
+            "className": "current-weather",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

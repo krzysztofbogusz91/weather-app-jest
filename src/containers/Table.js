@@ -33,7 +33,6 @@ export const Table = (props) => {
                 </tr>
             </thead>
             <tbody className='tbody-class'>
-                
                 {list}
             </tbody>
         </table>

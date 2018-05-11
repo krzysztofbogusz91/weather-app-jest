@@ -1,4 +1,4 @@
-import Current from './Current';
+import Search from './Search';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { fetchWeather, fetchUser, fetchForecast } from '../actions/index';
@@ -8,7 +8,7 @@ import * as actions from '../actions/index'
 
 const mockStore = configureMockStore();
 
-describe('Current connect', () => {
+describe('Search connect', () => {
     let wrapper, store;
 
     const initialState = {
@@ -16,7 +16,7 @@ describe('Current connect', () => {
     };
     store = mockStore(initialState);
     wrapper = shallow(
-        <Current store={store} />
+        <Search store={store} />
     );
     it('should have props, same as initialState', () => {
         expect(store.getState()).toEqual(initialState)
@@ -26,4 +26,3 @@ describe('Current connect', () => {
     //Generaly is, shows not coverd lines if if is present
     //LINK : https://jsramblings.com/2018/01/15/3-ways-to-test-mapStateToProps-and-mapDispatchToProps.html 
 });
-
