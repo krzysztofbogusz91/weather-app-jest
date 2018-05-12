@@ -4,7 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import { Header } from '../containers/Header';
 import Search from './Search';
 
-//TODO 
+// TODO 
 //-- Add default route and 404 page
 class App extends Component {
     render() {

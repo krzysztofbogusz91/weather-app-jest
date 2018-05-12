@@ -19,41 +19,63 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <header
-          className="m-4 header"
+          className="m-4 header text-info text-center"
 >
-          <h1>
+          <h1
+                    className="display-4"
+          >
                     WEATHER APP
           </h1>
 </header>,
         <nav
-          className="p-0 mt-4 navbar"
+          className="mt-4 navbar navbar-expand-lg navbar-light bg-light"
 >
           <ul
-                    className="nav nav-tabs d-flex w-100"
+                    className="nav d-flex justify-content-between w-100"
           >
                     <li
-                              className=" nav-item"
+                              className="nav-item"
                     >
                               <Link
-                                        className="nav-link"
+                                        className="nav-link text-info text-uppercase font-weight-bold"
                                         href="#"
                                         replace={false}
                                         to="/"
                               >
-                                        Weather In Your Localisation
+                                        Local Weather
                               </Link>
                     </li>
                     <li
-                              className=" nav-item"
+                              className="nav-item"
                     >
                               <Link
-                                        className="nav-link"
+                                        className="nav-link text-info text-uppercase font-weight-bold"
                                         href="#"
                                         replace={false}
                                         to="/search"
                               >
                                         Search Weather
                               </Link>
+                    </li>
+                    <li
+                              className="nav-item"
+                    >
+                              <a
+                                        className="nav-link text-info text-uppercase font-weight-bold"
+                                        href="#"
+                              >
+                                        My Weather
+                              </a>
+                    </li>
+                    <li
+                              className="nav-item"
+                    >
+                              <a
+                                        className="nav-link text-info text-uppercase font-weight-bold"
+                                        href="#"
+                              >
+                                        Contact
+                              </a>
                     </li>
           </ul>
 </nav>,
@@ -66,10 +88,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <h1>
+          "children": <h1
+            className="display-4"
+>
             WEATHER APP
 </h1>,
-          "className": "m-4 header",
+          "className": "m-4 header text-info text-center",
         },
         "ref": null,
         "rendered": Object {
@@ -78,6 +102,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "WEATHER APP",
+            "className": "display-4",
           },
           "ref": null,
           "rendered": "WEATHER APP",
@@ -91,25 +116,25 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <ul
-            className="nav nav-tabs d-flex w-100"
+            className="nav d-flex justify-content-between w-100"
 >
             <li
-                        className=" nav-item"
+                        className="nav-item"
             >
                         <Link
-                                    className="nav-link"
+                                    className="nav-link text-info text-uppercase font-weight-bold"
                                     href="#"
                                     replace={false}
                                     to="/"
                         >
-                                    Weather In Your Localisation
+                                    Local Weather
                         </Link>
             </li>
             <li
-                        className=" nav-item"
+                        className="nav-item"
             >
                         <Link
-                                    className="nav-link"
+                                    className="nav-link text-info text-uppercase font-weight-bold"
                                     href="#"
                                     replace={false}
                                     to="/search"
@@ -117,8 +142,28 @@ ShallowWrapper {
                                     Search Weather
                         </Link>
             </li>
+            <li
+                        className="nav-item"
+            >
+                        <a
+                                    className="nav-link text-info text-uppercase font-weight-bold"
+                                    href="#"
+                        >
+                                    My Weather
+                        </a>
+            </li>
+            <li
+                        className="nav-item"
+            >
+                        <a
+                                    className="nav-link text-info text-uppercase font-weight-bold"
+                                    href="#"
+                        >
+                                    Contact
+                        </a>
+            </li>
 </ul>,
-          "className": "p-0 mt-4 navbar",
+          "className": "mt-4 navbar navbar-expand-lg navbar-light bg-light",
         },
         "ref": null,
         "rendered": Object {
@@ -128,22 +173,22 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <li
-                className=" nav-item"
+                className="nav-item"
 >
                 <Link
-                                className="nav-link"
+                                className="nav-link text-info text-uppercase font-weight-bold"
                                 href="#"
                                 replace={false}
                                 to="/"
                 >
-                                Weather In Your Localisation
+                                Local Weather
                 </Link>
 </li>,
               <li
-                className=" nav-item"
+                className="nav-item"
 >
                 <Link
-                                className="nav-link"
+                                className="nav-link text-info text-uppercase font-weight-bold"
                                 href="#"
                                 replace={false}
                                 to="/search"
@@ -151,8 +196,28 @@ ShallowWrapper {
                                 Search Weather
                 </Link>
 </li>,
+              <li
+                className="nav-item"
+>
+                <a
+                                className="nav-link text-info text-uppercase font-weight-bold"
+                                href="#"
+                >
+                                My Weather
+                </a>
+</li>,
+              <li
+                className="nav-item"
+>
+                <a
+                                className="nav-link text-info text-uppercase font-weight-bold"
+                                href="#"
+                >
+                                Contact
+                </a>
+</li>,
             ],
-            "className": "nav nav-tabs d-flex w-100",
+            "className": "nav d-flex justify-content-between w-100",
           },
           "ref": null,
           "rendered": Array [
@@ -162,14 +227,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Link
-                  className="nav-link"
+                  className="nav-link text-info text-uppercase font-weight-bold"
                   href="#"
                   replace={false}
                   to="/"
 >
-                  Weather In Your Localisation
+                  Local Weather
 </Link>,
-                "className": " nav-item",
+                "className": "nav-item",
               },
               "ref": null,
               "rendered": Object {
@@ -177,14 +242,14 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": "Weather In Your Localisation",
-                  "className": "nav-link",
+                  "children": "Local Weather",
+                  "className": "nav-link text-info text-uppercase font-weight-bold",
                   "href": "#",
                   "replace": false,
                   "to": "/",
                 },
                 "ref": null,
-                "rendered": "Weather In Your Localisation",
+                "rendered": "Local Weather",
                 "type": [Function],
               },
               "type": "li",
@@ -195,14 +260,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Link
-                  className="nav-link"
+                  className="nav-link text-info text-uppercase font-weight-bold"
                   href="#"
                   replace={false}
                   to="/search"
 >
                   Search Weather
 </Link>,
-                "className": " nav-item",
+                "className": "nav-item",
               },
               "ref": null,
               "rendered": Object {
@@ -211,7 +276,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": "Search Weather",
-                  "className": "nav-link",
+                  "className": "nav-link text-info text-uppercase font-weight-bold",
                   "href": "#",
                   "replace": false,
                   "to": "/search",
@@ -219,6 +284,64 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "Search Weather",
                 "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  className="nav-link text-info text-uppercase font-weight-bold"
+                  href="#"
+>
+                  My Weather
+</a>,
+                "className": "nav-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "My Weather",
+                  "className": "nav-link text-info text-uppercase font-weight-bold",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "My Weather",
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  className="nav-link text-info text-uppercase font-weight-bold"
+                  href="#"
+>
+                  Contact
+</a>,
+                "className": "nav-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Contact",
+                  "className": "nav-link text-info text-uppercase font-weight-bold",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "Contact",
+                "type": "a",
               },
               "type": "li",
             },
@@ -238,41 +361,63 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <header
-            className="m-4 header"
+            className="m-4 header text-info text-center"
 >
-            <h1>
+            <h1
+                        className="display-4"
+            >
                         WEATHER APP
             </h1>
 </header>,
           <nav
-            className="p-0 mt-4 navbar"
+            className="mt-4 navbar navbar-expand-lg navbar-light bg-light"
 >
             <ul
-                        className="nav nav-tabs d-flex w-100"
+                        className="nav d-flex justify-content-between w-100"
             >
                         <li
-                                    className=" nav-item"
+                                    className="nav-item"
                         >
                                     <Link
-                                                className="nav-link"
+                                                className="nav-link text-info text-uppercase font-weight-bold"
                                                 href="#"
                                                 replace={false}
                                                 to="/"
                                     >
-                                                Weather In Your Localisation
+                                                Local Weather
                                     </Link>
                         </li>
                         <li
-                                    className=" nav-item"
+                                    className="nav-item"
                         >
                                     <Link
-                                                className="nav-link"
+                                                className="nav-link text-info text-uppercase font-weight-bold"
                                                 href="#"
                                                 replace={false}
                                                 to="/search"
                                     >
                                                 Search Weather
                                     </Link>
+                        </li>
+                        <li
+                                    className="nav-item"
+                        >
+                                    <a
+                                                className="nav-link text-info text-uppercase font-weight-bold"
+                                                href="#"
+                                    >
+                                                My Weather
+                                    </a>
+                        </li>
+                        <li
+                                    className="nav-item"
+                        >
+                                    <a
+                                                className="nav-link text-info text-uppercase font-weight-bold"
+                                                href="#"
+                                    >
+                                                Contact
+                                    </a>
                         </li>
             </ul>
 </nav>,
@@ -285,10 +430,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <h1>
+            "children": <h1
+              className="display-4"
+>
               WEATHER APP
 </h1>,
-            "className": "m-4 header",
+            "className": "m-4 header text-info text-center",
           },
           "ref": null,
           "rendered": Object {
@@ -297,6 +444,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "WEATHER APP",
+              "className": "display-4",
             },
             "ref": null,
             "rendered": "WEATHER APP",
@@ -310,25 +458,25 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <ul
-              className="nav nav-tabs d-flex w-100"
+              className="nav d-flex justify-content-between w-100"
 >
               <li
-                            className=" nav-item"
+                            className="nav-item"
               >
                             <Link
-                                          className="nav-link"
+                                          className="nav-link text-info text-uppercase font-weight-bold"
                                           href="#"
                                           replace={false}
                                           to="/"
                             >
-                                          Weather In Your Localisation
+                                          Local Weather
                             </Link>
               </li>
               <li
-                            className=" nav-item"
+                            className="nav-item"
               >
                             <Link
-                                          className="nav-link"
+                                          className="nav-link text-info text-uppercase font-weight-bold"
                                           href="#"
                                           replace={false}
                                           to="/search"
@@ -336,8 +484,28 @@ ShallowWrapper {
                                           Search Weather
                             </Link>
               </li>
+              <li
+                            className="nav-item"
+              >
+                            <a
+                                          className="nav-link text-info text-uppercase font-weight-bold"
+                                          href="#"
+                            >
+                                          My Weather
+                            </a>
+              </li>
+              <li
+                            className="nav-item"
+              >
+                            <a
+                                          className="nav-link text-info text-uppercase font-weight-bold"
+                                          href="#"
+                            >
+                                          Contact
+                            </a>
+              </li>
 </ul>,
-            "className": "p-0 mt-4 navbar",
+            "className": "mt-4 navbar navbar-expand-lg navbar-light bg-light",
           },
           "ref": null,
           "rendered": Object {
@@ -347,22 +515,22 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <li
-                  className=" nav-item"
+                  className="nav-item"
 >
                   <Link
-                                    className="nav-link"
+                                    className="nav-link text-info text-uppercase font-weight-bold"
                                     href="#"
                                     replace={false}
                                     to="/"
                   >
-                                    Weather In Your Localisation
+                                    Local Weather
                   </Link>
 </li>,
                 <li
-                  className=" nav-item"
+                  className="nav-item"
 >
                   <Link
-                                    className="nav-link"
+                                    className="nav-link text-info text-uppercase font-weight-bold"
                                     href="#"
                                     replace={false}
                                     to="/search"
@@ -370,8 +538,28 @@ ShallowWrapper {
                                     Search Weather
                   </Link>
 </li>,
+                <li
+                  className="nav-item"
+>
+                  <a
+                                    className="nav-link text-info text-uppercase font-weight-bold"
+                                    href="#"
+                  >
+                                    My Weather
+                  </a>
+</li>,
+                <li
+                  className="nav-item"
+>
+                  <a
+                                    className="nav-link text-info text-uppercase font-weight-bold"
+                                    href="#"
+                  >
+                                    Contact
+                  </a>
+</li>,
               ],
-              "className": "nav nav-tabs d-flex w-100",
+              "className": "nav d-flex justify-content-between w-100",
             },
             "ref": null,
             "rendered": Array [
@@ -381,14 +569,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Link
-                    className="nav-link"
+                    className="nav-link text-info text-uppercase font-weight-bold"
                     href="#"
                     replace={false}
                     to="/"
 >
-                    Weather In Your Localisation
+                    Local Weather
 </Link>,
-                  "className": " nav-item",
+                  "className": "nav-item",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -396,14 +584,14 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": "Weather In Your Localisation",
-                    "className": "nav-link",
+                    "children": "Local Weather",
+                    "className": "nav-link text-info text-uppercase font-weight-bold",
                     "href": "#",
                     "replace": false,
                     "to": "/",
                   },
                   "ref": null,
-                  "rendered": "Weather In Your Localisation",
+                  "rendered": "Local Weather",
                   "type": [Function],
                 },
                 "type": "li",
@@ -414,14 +602,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Link
-                    className="nav-link"
+                    className="nav-link text-info text-uppercase font-weight-bold"
                     href="#"
                     replace={false}
                     to="/search"
 >
                     Search Weather
 </Link>,
-                  "className": " nav-item",
+                  "className": "nav-item",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -430,7 +618,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": "Search Weather",
-                    "className": "nav-link",
+                    "className": "nav-link text-info text-uppercase font-weight-bold",
                     "href": "#",
                     "replace": false,
                     "to": "/search",
@@ -438,6 +626,64 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": "Search Weather",
                   "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    className="nav-link text-info text-uppercase font-weight-bold"
+                    href="#"
+>
+                    My Weather
+</a>,
+                  "className": "nav-item",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "My Weather",
+                    "className": "nav-link text-info text-uppercase font-weight-bold",
+                    "href": "#",
+                  },
+                  "ref": null,
+                  "rendered": "My Weather",
+                  "type": "a",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    className="nav-link text-info text-uppercase font-weight-bold"
+                    href="#"
+>
+                    Contact
+</a>,
+                  "className": "nav-item",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Contact",
+                    "className": "nav-link text-info text-uppercase font-weight-bold",
+                    "href": "#",
+                  },
+                  "ref": null,
+                  "rendered": "Contact",
+                  "type": "a",
                 },
                 "type": "li",
               },
