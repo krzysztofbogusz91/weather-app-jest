@@ -39,13 +39,13 @@ export class Search extends Component {
     }
 
     componentWillUnmount() {
+        //prevent issue of data disply afeter route change
         this.props.clearFetch();
     }
     
     render() {
         const renderTable = this.state.renderTable;
-        //TODO => BEAKES WHEN COMIG BACK FROM PREVIOUS SITE: this.props.weather.length > 0 && this.props.today.length > 0;
-        //TODO => ADD ACTION TO CLEAR ALL TABLES
+
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
