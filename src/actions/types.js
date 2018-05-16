@@ -2,7 +2,5 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 export const FETCH_FORECAST = 'FETCH_FORECAST';
 export const USER_CORDS = 'USER_CORDS';
 export const CLEAR = 'CLEAR'
-export const STATUS_PENDING = 'STATUS_PENDING';
-export const STATUS_SUCCESS = 'STATUS_SUCCESS';
-export const STATUS_ERROR = 'STATUS_ERROR'
+
 

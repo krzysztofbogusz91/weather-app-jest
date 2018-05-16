@@ -26,7 +26,6 @@ export class Current extends Component {
         // },2000)
     }
     componentWillUnmount() {
-       
         this.props.clearFetch();
     }
     render() {

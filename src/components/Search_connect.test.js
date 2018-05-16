@@ -1,7 +1,7 @@
 import Search from './Search';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { fetchWeather, fetchUser, fetchForecast } from '../actions/index';
+import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
 import configureMockStore from 'redux-mock-store';
 import set from '../enzyme_set_up';
 import * as actions from '../actions/index'

@@ -1,7 +1,6 @@
 import * as types from './types';
 import { term } from '../helpers/check_search';
 
-
 const API_KEY = '54df0301d1505a0aee49fe3b417ecd92';
 const urlMain = `https://api.openweathermap.org/data/2.5/`;
 
@@ -12,20 +11,18 @@ export const clearFetch = () =>{
 }
 
 export const fetchWeather = data => dispatch =>{
-   
+  
     let search = term(data);
     const url = `${urlMain}weather?${search}&appid=${API_KEY}`;
 
    return fetch(url)
-        .then(res =>{ 
-            console.log(res)
-            return res.json()})
+        .then(res => res.json())
         .then(data => {
             dispatch({
                 type: types.FETCH_WEATHER,
-                payload: data
+                payload: data,
             })}
-        ).catch(err => console.log(err) );
+        ).catch(err => err);
 }
 
 export const fetchForecast = data => dispatch =>{

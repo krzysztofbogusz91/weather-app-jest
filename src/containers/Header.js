@@ -20,14 +20,14 @@ export const Header = () =>{
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <a href='#' className="nav-link text-info text-uppercase font-weight-bold" >
+                        <Link to='/user' className="nav-link text-info text-uppercase font-weight-bold" >
                             My Weather
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a href='#' className="nav-link text-info text-uppercase font-weight-bold" >
+                        <Link to='/contact' className="nav-link text-info text-uppercase font-weight-bold" >
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

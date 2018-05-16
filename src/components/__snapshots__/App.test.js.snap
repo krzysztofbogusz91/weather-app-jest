@@ -29,6 +29,14 @@ ShallowWrapper {
                         component={[Function]}
                         path="/search"
                 />
+                <Route
+                        component={[Function]}
+                        path="/user"
+                />
+                <Route
+                        component={[Function]}
+                        path="/contact"
+                />
         </div>
 </BrowserRouter>,
       "className": "main container",
@@ -50,6 +58,14 @@ ShallowWrapper {
                     component={[Function]}
                     path="/search"
           />
+          <Route
+                    component={[Function]}
+                    path="/user"
+          />
+          <Route
+                    component={[Function]}
+                    path="/contact"
+          />
 </div>,
       },
       "ref": null,
@@ -68,6 +84,14 @@ ShallowWrapper {
             <Route
               component={[Function]}
               path="/search"
+/>,
+            <Route
+              component={[Function]}
+              path="/user"
+/>,
+            <Route
+              component={[Function]}
+              path="/contact"
 />,
           ],
         },
@@ -107,6 +131,30 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/user",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/contact",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": "div",
       },
@@ -132,6 +180,14 @@ ShallowWrapper {
                               component={[Function]}
                               path="/search"
                     />
+                    <Route
+                              component={[Function]}
+                              path="/user"
+                    />
+                    <Route
+                              component={[Function]}
+                              path="/contact"
+                    />
           </div>
 </BrowserRouter>,
         "className": "main container",
@@ -153,6 +209,14 @@ ShallowWrapper {
                         component={[Function]}
                         path="/search"
             />
+            <Route
+                        component={[Function]}
+                        path="/user"
+            />
+            <Route
+                        component={[Function]}
+                        path="/contact"
+            />
 </div>,
         },
         "ref": null,
@@ -171,6 +235,14 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 path="/search"
+/>,
+              <Route
+                component={[Function]}
+                path="/user"
+/>,
+              <Route
+                component={[Function]}
+                path="/contact"
 />,
             ],
           },
@@ -205,6 +277,30 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "path": "/search",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/user",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/contact",
               },
               "ref": null,
               "rendered": null,

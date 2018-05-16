@@ -29,7 +29,7 @@ export default (state={...initialState}, action) => {
            
             return {
                 ...state,
-                weather: myData
+                weather: myData,
                 //action.payload.list
             }
         }    

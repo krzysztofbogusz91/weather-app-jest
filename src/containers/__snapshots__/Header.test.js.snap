@@ -60,22 +60,24 @@ ShallowWrapper {
                     <li
                               className="nav-item"
                     >
-                              <a
+                              <Link
                                         className="nav-link text-info text-uppercase font-weight-bold"
-                                        href="#"
+                                        replace={false}
+                                        to="/user"
                               >
                                         My Weather
-                              </a>
+                              </Link>
                     </li>
                     <li
                               className="nav-item"
                     >
-                              <a
+                              <Link
                                         className="nav-link text-info text-uppercase font-weight-bold"
-                                        href="#"
+                                        replace={false}
+                                        to="/contact"
                               >
                                         Contact
-                              </a>
+                              </Link>
                     </li>
           </ul>
 </nav>,
@@ -145,22 +147,24 @@ ShallowWrapper {
             <li
                         className="nav-item"
             >
-                        <a
+                        <Link
                                     className="nav-link text-info text-uppercase font-weight-bold"
-                                    href="#"
+                                    replace={false}
+                                    to="/user"
                         >
                                     My Weather
-                        </a>
+                        </Link>
             </li>
             <li
                         className="nav-item"
             >
-                        <a
+                        <Link
                                     className="nav-link text-info text-uppercase font-weight-bold"
-                                    href="#"
+                                    replace={false}
+                                    to="/contact"
                         >
                                     Contact
-                        </a>
+                        </Link>
             </li>
 </ul>,
           "className": "mt-4 navbar navbar-expand-lg navbar-light bg-light",
@@ -199,22 +203,24 @@ ShallowWrapper {
               <li
                 className="nav-item"
 >
-                <a
+                <Link
                                 className="nav-link text-info text-uppercase font-weight-bold"
-                                href="#"
+                                replace={false}
+                                to="/user"
                 >
                                 My Weather
-                </a>
+                </Link>
 </li>,
               <li
                 className="nav-item"
 >
-                <a
+                <Link
                                 className="nav-link text-info text-uppercase font-weight-bold"
-                                href="#"
+                                replace={false}
+                                to="/contact"
                 >
                                 Contact
-                </a>
+                </Link>
 </li>,
             ],
             "className": "nav d-flex justify-content-between w-100",
@@ -292,27 +298,29 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
+                "children": <Link
                   className="nav-link text-info text-uppercase font-weight-bold"
-                  href="#"
+                  replace={false}
+                  to="/user"
 >
                   My Weather
-</a>,
+</Link>,
                 "className": "nav-item",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": "My Weather",
                   "className": "nav-link text-info text-uppercase font-weight-bold",
-                  "href": "#",
+                  "replace": false,
+                  "to": "/user",
                 },
                 "ref": null,
                 "rendered": "My Weather",
-                "type": "a",
+                "type": [Function],
               },
               "type": "li",
             },
@@ -321,27 +329,29 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
+                "children": <Link
                   className="nav-link text-info text-uppercase font-weight-bold"
-                  href="#"
+                  replace={false}
+                  to="/contact"
 >
                   Contact
-</a>,
+</Link>,
                 "className": "nav-item",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": "Contact",
                   "className": "nav-link text-info text-uppercase font-weight-bold",
-                  "href": "#",
+                  "replace": false,
+                  "to": "/contact",
                 },
                 "ref": null,
                 "rendered": "Contact",
-                "type": "a",
+                "type": [Function],
               },
               "type": "li",
             },
@@ -402,22 +412,24 @@ ShallowWrapper {
                         <li
                                     className="nav-item"
                         >
-                                    <a
+                                    <Link
                                                 className="nav-link text-info text-uppercase font-weight-bold"
-                                                href="#"
+                                                replace={false}
+                                                to="/user"
                                     >
                                                 My Weather
-                                    </a>
+                                    </Link>
                         </li>
                         <li
                                     className="nav-item"
                         >
-                                    <a
+                                    <Link
                                                 className="nav-link text-info text-uppercase font-weight-bold"
-                                                href="#"
+                                                replace={false}
+                                                to="/contact"
                                     >
                                                 Contact
-                                    </a>
+                                    </Link>
                         </li>
             </ul>
 </nav>,
@@ -487,22 +499,24 @@ ShallowWrapper {
               <li
                             className="nav-item"
               >
-                            <a
+                            <Link
                                           className="nav-link text-info text-uppercase font-weight-bold"
-                                          href="#"
+                                          replace={false}
+                                          to="/user"
                             >
                                           My Weather
-                            </a>
+                            </Link>
               </li>
               <li
                             className="nav-item"
               >
-                            <a
+                            <Link
                                           className="nav-link text-info text-uppercase font-weight-bold"
-                                          href="#"
+                                          replace={false}
+                                          to="/contact"
                             >
                                           Contact
-                            </a>
+                            </Link>
               </li>
 </ul>,
             "className": "mt-4 navbar navbar-expand-lg navbar-light bg-light",
@@ -541,22 +555,24 @@ ShallowWrapper {
                 <li
                   className="nav-item"
 >
-                  <a
+                  <Link
                                     className="nav-link text-info text-uppercase font-weight-bold"
-                                    href="#"
+                                    replace={false}
+                                    to="/user"
                   >
                                     My Weather
-                  </a>
+                  </Link>
 </li>,
                 <li
                   className="nav-item"
 >
-                  <a
+                  <Link
                                     className="nav-link text-info text-uppercase font-weight-bold"
-                                    href="#"
+                                    replace={false}
+                                    to="/contact"
                   >
                                     Contact
-                  </a>
+                  </Link>
 </li>,
               ],
               "className": "nav d-flex justify-content-between w-100",
@@ -634,27 +650,29 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <a
+                  "children": <Link
                     className="nav-link text-info text-uppercase font-weight-bold"
-                    href="#"
+                    replace={false}
+                    to="/user"
 >
                     My Weather
-</a>,
+</Link>,
                   "className": "nav-item",
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "My Weather",
                     "className": "nav-link text-info text-uppercase font-weight-bold",
-                    "href": "#",
+                    "replace": false,
+                    "to": "/user",
                   },
                   "ref": null,
                   "rendered": "My Weather",
-                  "type": "a",
+                  "type": [Function],
                 },
                 "type": "li",
               },
@@ -663,27 +681,29 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <a
+                  "children": <Link
                     className="nav-link text-info text-uppercase font-weight-bold"
-                    href="#"
+                    replace={false}
+                    to="/contact"
 >
                     Contact
-</a>,
+</Link>,
                   "className": "nav-item",
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "Contact",
                     "className": "nav-link text-info text-uppercase font-weight-bold",
-                    "href": "#",
+                    "replace": false,
+                    "to": "/contact",
                   },
                   "ref": null,
                   "rendered": "Contact",
-                  "type": "a",
+                  "type": [Function],
                 },
                 "type": "li",
               },

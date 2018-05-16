@@ -28,8 +28,10 @@ export class Search extends Component {
         //ADD SUBMIT VALIDATION AND TESTS
         e.preventDefault()
         const cord = this.state.search;
-        this.props.fetchForecast(cord)
+    
+        this.props.fetchForecast(cord);
         this.props.fetchWeather(cord);
+        
         //TODO find better solution to prevent on come back to this page having results form previous
         this.setState({
             renderTable: true
@@ -71,7 +73,6 @@ export class Search extends Component {
                         </div>
                         : null}
                 </div>
-
             </div>
         );
     }
