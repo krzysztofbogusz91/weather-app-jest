@@ -9,6 +9,7 @@ ShallowWrapper {
     fetchForecast={[Function]}
     fetchUser={[Function]}
     fetchWeather={[Function]}
+    mockClearFetch={[Function]}
     today={Array []}
     weather={Array []}
 />,

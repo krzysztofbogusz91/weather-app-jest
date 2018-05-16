@@ -1,7 +1,7 @@
 import Current from './Current';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { fetchWeather, fetchUser, fetchForecast } from '../actions/index';
+import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
 import configureMockStore from 'redux-mock-store';
 import set from '../enzyme_set_up';
 import * as actions from '../actions/index'
@@ -21,6 +21,8 @@ describe('Current connect', () => {
     it('should have props, same as initialState', () => {
         expect(store.getState()).toEqual(initialState)
     });
+
+   
     //TODO => HOW TO TEST ACTIONS IN THAT CASE
     //FIX TEST COVERAGE BUT IS IT CORRECT?
     //Generaly is, shows not coverd lines if if is present

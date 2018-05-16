@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWeather,fetchForecast } from '../actions/index';
+import { fetchWeather,fetchForecast, clearFetch } from '../actions/index';
 import { Table } from '../containers/Table';
 
 //TODO 
@@ -34,6 +34,10 @@ export class Search extends Component {
         this.setState({
             renderTable: true
         })
+    }
+
+    componentWillUnmount() {
+        this.props.clearFetch();
     }
     
     render() {
@@ -87,4 +91,4 @@ Search.defaultProps = {
     cords: {},
 }
 
-export default connect(state => ({ ...state }), { fetchWeather, fetchForecast })(Search);
+export default connect(state => ({ ...state }), { fetchWeather, fetchForecast, clearFetch })(Search);

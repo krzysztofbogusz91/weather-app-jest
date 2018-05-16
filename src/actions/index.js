@@ -3,7 +3,13 @@ import { term } from '../helpers/check_search';
 
 
 const API_KEY = '54df0301d1505a0aee49fe3b417ecd92';
-const urlMain = `https://api.openweathermap.org/data/2.5/`
+const urlMain = `https://api.openweathermap.org/data/2.5/`;
+
+export const clearFetch = () =>{
+  return {
+       type: types.CLEAR,
+   }
+}
 
 export const fetchWeather = data => dispatch =>{
    
@@ -11,13 +17,15 @@ export const fetchWeather = data => dispatch =>{
     const url = `${urlMain}weather?${search}&appid=${API_KEY}`;
 
    return fetch(url)
-        .then(res => res.json())
+        .then(res =>{ 
+            console.log(res)
+            return res.json()})
         .then(data => {
             dispatch({
                 type: types.FETCH_WEATHER,
                 payload: data
             })}
-        ).catch(err => err );
+        ).catch(err => console.log(err) );
 }
 
 export const fetchForecast = data => dispatch =>{
@@ -60,3 +68,5 @@ export const fetchUser = () => dispatch =>{
             ).catch(err => err );
     //   } end if else
 }
+
+

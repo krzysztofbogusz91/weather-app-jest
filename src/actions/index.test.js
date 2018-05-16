@@ -3,7 +3,7 @@ import * as types from './types';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import { fetchWeather, fetchUser, fetchForecast } from "./index";
+import { fetchWeather, fetchUser, fetchForecast, clearFetch } from "./index";
 
 
 const createMockStore = configureMockStore([thunk]);
@@ -148,4 +148,11 @@ describe('getUserCords', () => {
             expect(store.getActions()).not.toEqual(expected)
         })
     });
+});
+
+describe('ClearFetches', () => {
+    const expected = {
+        type: types.CLEAR
+    }
+    expect(actions.clearFetch()).toEqual(expected)
 });

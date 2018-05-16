@@ -73,5 +73,17 @@ it('should return state with weather arr', () => {
 
 });
 
+it('should clear forecast and weatech states', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"]
+      }
+    
+    const output = {...state , weather: [], today: []}
+    
+    expect( appReducer(state, {type: types.CLEAR} )).toEqual(output)
+});
+
 
 });

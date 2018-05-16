@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWeather, fetchUser, fetchForecast } from '../actions/index';
+import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
 import { Table } from '../containers/Table';
 
 
-export class Current extends Component {
+
+export class Current extends Component {  
     setAll = async () => {
         //TODO ADD ERROR HANDLING ON FETCH METHODS => AVOID ERRORS IN THE CONSOLE 
         await this.props.fetchUser();
@@ -20,11 +21,14 @@ export class Current extends Component {
       
         //TODO RELOAD EVERY 10 minutes? and store it all in Local storage?
         // this.time = setTimeout(()=>{
-        //     this.setAll();
+        //     this.setAll()
         //     console.log('reload'); 
         // },2000)
     }
-
+    componentWillUnmount() {
+       
+        this.props.clearFetch();
+    }
     render() {
        //console.log(this.props)
         const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
@@ -63,4 +67,4 @@ Current.defaultProps = {
     cords: {},
 }
 
-export default connect(state => ({ ...state }), { fetchWeather, fetchUser, fetchForecast })(Current);
+export default connect(state => ({ ...state }), { fetchWeather, fetchUser, fetchForecast,clearFetch })(Current);

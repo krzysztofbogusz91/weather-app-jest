@@ -37,7 +37,13 @@ export default (state={...initialState}, action) => {
             return{
                 ...state,
                 cords: action.payload
-            }    
+            }
+        case types.CLEAR:
+            return {
+                ...state,
+                weather: [],
+                today: []
+            }     
         default:
             return state
     }
