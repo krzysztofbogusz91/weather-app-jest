@@ -80,26 +80,11 @@ ShallowWrapper {
           className="tbody-class"
 >
           <tr>
-                    <td>
-                              2018-05-07 18:00:00
-                    </td>
-                    <td>
-                              <img
-                                        alt="icon"
-                                        src="http://openweathermap.org/img/w/01d.png"
-                              />
-                    </td>
-                    <td>
-                              clear sky
-                    </td>
-                    <td>
-                               
-                              22 C
-                    </td>
-                    <td>
-                              45 %
-                                
-                    </td>
+                    <th
+                              colSpan="5"
+                    >
+                              2018-05-07
+                    </th>
           </tr>
           <tr>
                     <td>
@@ -313,26 +298,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <tr>
-              <td>
-                            2018-05-07 18:00:00
-              </td>
-              <td>
-                            <img
-                                          alt="icon"
-                                          src="http://openweathermap.org/img/w/01d.png"
-                            />
-              </td>
-              <td>
-                            clear sky
-              </td>
-              <td>
-                             
-                            22 C
-              </td>
-              <td>
-                            45 %
-                              
-              </td>
+              <th
+                            colSpan="5"
+              >
+                            2018-05-07
+              </th>
 </tr>,
             <tr>
               <td>
@@ -363,116 +333,28 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "02018-05-07 18:00:00",
+            "key": "02018-05-07",
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <td>
-                  2018-05-07 18:00:00
-</td>,
-                <td>
-                  <img
-                                    alt="icon"
-                                    src="http://openweathermap.org/img/w/01d.png"
-                  />
-</td>,
-                <td>
-                  clear sky
-</td>,
-                <td>
-                   
-                  22 C
-</td>,
-                <td>
-                  45 %
-                    
-</td>,
-              ],
+              "children": <th
+                colSpan="5"
+>
+                2018-05-07
+</th>,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "2018-05-07 18:00:00",
-                },
-                "ref": null,
-                "rendered": "2018-05-07 18:00:00",
-                "type": "td",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "2018-05-07",
+                "colSpan": "5",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <img
-                    alt="icon"
-                    src="http://openweathermap.org/img/w/01d.png"
-/>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "icon",
-                    "src": "http://openweathermap.org/img/w/01d.png",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                "type": "td",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "clear sky",
-                },
-                "ref": null,
-                "rendered": "clear sky",
-                "type": "td",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    " ",
-                    "22 C",
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  " ",
-                  "22 C",
-                ],
-                "type": "td",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "45 %",
-                    "  ",
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "45 %",
-                  "  ",
-                ],
-                "type": "td",
-              },
-            ],
+              "ref": null,
+              "rendered": "2018-05-07",
+              "type": "th",
+            },
             "type": "tr",
           },
           Object {
@@ -644,26 +526,11 @@ ShallowWrapper {
             className="tbody-class"
 >
             <tr>
-                        <td>
-                                    2018-05-07 18:00:00
-                        </td>
-                        <td>
-                                    <img
-                                                alt="icon"
-                                                src="http://openweathermap.org/img/w/01d.png"
-                                    />
-                        </td>
-                        <td>
-                                    clear sky
-                        </td>
-                        <td>
-                                     
-                                    22 C
-                        </td>
-                        <td>
-                                    45 %
-                                      
-                        </td>
+                        <th
+                                    colSpan="5"
+                        >
+                                    2018-05-07
+                        </th>
             </tr>
             <tr>
                         <td>
@@ -877,26 +744,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <tr>
-                <td>
-                                2018-05-07 18:00:00
-                </td>
-                <td>
-                                <img
-                                                alt="icon"
-                                                src="http://openweathermap.org/img/w/01d.png"
-                                />
-                </td>
-                <td>
-                                clear sky
-                </td>
-                <td>
-                                 
-                                22 C
-                </td>
-                <td>
-                                45 %
-                                  
-                </td>
+                <th
+                                colSpan="5"
+                >
+                                2018-05-07
+                </th>
 </tr>,
               <tr>
                 <td>
@@ -927,116 +779,28 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "02018-05-07 18:00:00",
+              "key": "02018-05-07",
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <td>
-                    2018-05-07 18:00:00
-</td>,
-                  <td>
-                    <img
-                                        alt="icon"
-                                        src="http://openweathermap.org/img/w/01d.png"
-                    />
-</td>,
-                  <td>
-                    clear sky
-</td>,
-                  <td>
-                     
-                    22 C
-</td>,
-                  <td>
-                    45 %
-                      
-</td>,
-                ],
+                "children": <th
+                  colSpan="5"
+>
+                  2018-05-07
+</th>,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "2018-05-07 18:00:00",
-                  },
-                  "ref": null,
-                  "rendered": "2018-05-07 18:00:00",
-                  "type": "td",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2018-05-07",
+                  "colSpan": "5",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <img
-                      alt="icon"
-                      src="http://openweathermap.org/img/w/01d.png"
-/>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "icon",
-                      "src": "http://openweathermap.org/img/w/01d.png",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  "type": "td",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "clear sky",
-                  },
-                  "ref": null,
-                  "rendered": "clear sky",
-                  "type": "td",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      " ",
-                      "22 C",
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    " ",
-                    "22 C",
-                  ],
-                  "type": "td",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      "45 %",
-                      "  ",
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    "45 %",
-                    "  ",
-                  ],
-                  "type": "td",
-                },
-              ],
+                "ref": null,
+                "rendered": "2018-05-07",
+                "type": "th",
+              },
               "type": "tr",
             },
             Object {

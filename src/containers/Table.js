@@ -1,14 +1,51 @@
 import React from 'react';
 
 export const Table = (props) => {
-   // console.log(props.table)
     const isToday = props.type === "today";
     const title = isToday ? 'CURRENT WEATHER' : `FORECAST FOR NEXT 5 DAYS`;
 
     const data = isToday ? "Name" : "Date";
-    const list = props.table.map((a,i) => {
-        const name = isToday ? a.name : a.name.substring( a.name.indexOf(' ') , a.name.lenght );
-        const date = isToday ? a.name : a.name.substring( a.name.lenght, a.name.indexOf(' ') );
+
+    const displayList = [];
+
+    props.table.forEach((a, i, arr) => {
+        //get only date form string
+        const name1 = a.name.substring(0, a.name.indexOf(' '));
+        if (arr.length > 1) {
+            if (i === 0) {
+                //for first element push first date
+                displayList.push({ name: name1 })
+            }
+            if (i < arr.length - 1) {
+
+                const elem2 = arr[i + 1];
+                const name2 = elem2.name.substring(0, elem2.name.indexOf(' '));
+
+                //compare dates if diffrent push date tr    
+                if (name1 === name2) {
+
+                    displayList.push(a)
+
+                } else {
+                    displayList.push(a)
+                    //for every other day push next date
+                    displayList.push({ name: name2 })
+                }
+            }
+        } else {
+            //for the today list push first and only  element
+            displayList.push(a)
+        }
+    })
+
+
+    const list = displayList.map((a, i) => {
+        //if name is converted to date only its length is always 10
+        if (a.name.length === 10) {
+            return <tr key={i + a.name}><th colSpan="5">{a.name}</th></tr>
+        }
+        const name = isToday ? a.name : a.name.substring(a.name.indexOf(' '), a.name.lenght);
+
         return (
             <tr key={i + a.name}>
                 <td>{name}</td>
@@ -18,10 +55,8 @@ export const Table = (props) => {
                 <td>{a.humidity + ' %'}  </td>
             </tr>
         )
-  
-        
     })
-    //ADD COMPONONENT WITH CHART AND TEST
+    
     return (
         <table className="table table-striped text-center table-bordered table-light mt-4">
             <thead>
