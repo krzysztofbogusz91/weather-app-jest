@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchWeather,fetchForecast, clearFetch } from '../actions/index';
 import { Table } from '../containers/Table';
-
+import MapContainer from "./MapContainer";
 //TODO 
 //-- Add error handling in acitions or reducers? when code i 404
 
@@ -13,6 +13,7 @@ export class Search extends Component {
         this.state = {
             search: "",
             renderTable: false,
+           
         }
     }
 
@@ -32,9 +33,8 @@ export class Search extends Component {
         this.props.fetchForecast(cord);
         this.props.fetchWeather(cord);
         
-        //TODO find better solution to prevent on come back to this page having results form previous
         this.setState({
-            renderTable: true
+            renderTable: true,
         })
     }
 
@@ -45,7 +45,10 @@ export class Search extends Component {
     
     render() {
         const renderTable = this.state.renderTable;
-
+        const coord = this.props.today.length > 0 && this.props.today[0].coord
+        const lat = coord ? this.props.today[0].coord.lat : 0;
+        const lon = coord ? this.props.today[0].coord.lon : 0;
+      
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
@@ -61,9 +64,11 @@ export class Search extends Component {
                         </button>
                 </ form>
 
-                <div className='current-weather'>
+                <div className='current-weather mt-3'>
+                    
                     {renderTable ? 
                         <div>
+                        <MapContainer lat={lat} lng={lon} />    
                         <Table 
                             type="today" 
                             table={this.props.today} />

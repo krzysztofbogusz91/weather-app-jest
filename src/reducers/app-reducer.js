@@ -10,11 +10,11 @@ export default (state={...initialState}, action) => {
     switch (action.type) {
         case types.FETCH_WEATHER:
         //creates object to pass as a props
-        const {name, main: {temp, humidity}} = action.payload;
+        const {name, coord, main: {temp, humidity}} = action.payload;
         const {icon, description} = {...action.payload.weather[0]}
             return {
                 ...state,
-                today: [{name, temp, humidity, icon, description}]
+                today: [{name, coord, temp, humidity, icon, description}]
             }
         case types.FETCH_FORECAST:{
 

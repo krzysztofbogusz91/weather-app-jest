@@ -18,6 +18,7 @@ export const fetchWeather = data => dispatch =>{
    return fetch(url)
         .then(res => res.json())
         .then(data => {
+            
             dispatch({
                 type: types.FETCH_WEATHER,
                 payload: data,

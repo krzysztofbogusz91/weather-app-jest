@@ -71,7 +71,7 @@ describe('Mount Current', () => {
             ]
         })
 
-        expect(current.find('.current-weather').children().length).toEqual(1)
+        expect(current.find('.current-weather').children().length).toEqual(2)
     });
 
 });

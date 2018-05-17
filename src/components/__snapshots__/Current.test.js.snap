@@ -27,7 +27,12 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="current-weather"
-/>,
+>
+        <Wrapper
+                lat={undefined}
+                lng={undefined}
+        />
+</div>,
       "className": "mt-5",
     },
     "ref": null,
@@ -36,11 +41,31 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": null,
+        "children": Array [
+          <Wrapper
+            lat={undefined}
+            lng={undefined}
+/>,
+          null,
+        ],
         "className": "current-weather",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "lat": undefined,
+            "lng": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        null,
+      ],
       "type": "div",
     },
     "type": "div",
@@ -53,7 +78,12 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="current-weather"
-/>,
+>
+          <Wrapper
+                    lat={undefined}
+                    lng={undefined}
+          />
+</div>,
         "className": "mt-5",
       },
       "ref": null,
@@ -62,11 +92,31 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": null,
+          "children": Array [
+            <Wrapper
+              lat={undefined}
+              lng={undefined}
+/>,
+            null,
+          ],
           "className": "current-weather",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "lat": undefined,
+              "lng": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          null,
+        ],
         "type": "div",
       },
       "type": "div",

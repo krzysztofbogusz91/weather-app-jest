@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
 import { Table } from '../containers/Table';
+import MapContainer from "./MapContainer";
 
 
 
@@ -31,10 +32,13 @@ export class Current extends Component {
     render() {
        //console.log(this.props)
         const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
+        const lat = this.props.cords.lat;
+        const lng = this.props.cords.lng;
 
         return (
             <div className="mt-5">
                 <div className='current-weather'>
+                <MapContainer lat={lat} lng={lng} />  
                     {renderTable ? 
                         <div>
                         <Table 
