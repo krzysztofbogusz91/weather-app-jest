@@ -12,8 +12,7 @@ export class Search extends Component {
         super(props);
         this.state = {
             search: "",
-            renderTable: false,
-           
+            renderTable: false, 
         }
     }
 

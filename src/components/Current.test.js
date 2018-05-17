@@ -24,7 +24,6 @@ describe('Current', () => {
     it('fetchUser should update props', () => {
         expect(current.props().cords).not.toEqual({})
     });
-  
 })
 
 describe('Mount Current', () => {

@@ -20,7 +20,7 @@ export class Current extends Component {
     componentDidMount() {
         this.setAll()
       
-        //TODO RELOAD EVERY 10 minutes? and store it all in Local storage?
+        //TODO RELOAD EVERY 10 minutes
         // this.time = setTimeout(()=>{
         //     this.setAll()
         //     console.log('reload'); 
@@ -30,7 +30,6 @@ export class Current extends Component {
         this.props.clearFetch();
     }
     render() {
-       //console.log(this.props)
         const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
         const lat = this.props.cords.lat;
         const lng = this.props.cords.lng;

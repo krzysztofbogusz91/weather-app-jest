@@ -15,7 +15,6 @@ export class MapContainer extends Component {
 
     render() {
         //first div styles map
-        
         return (
            <div style={{position:"relative", width:"100%", height:"200px"}}>
             <Map
