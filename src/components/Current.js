@@ -33,7 +33,7 @@ export class Current extends Component {
         const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
         const lat = this.props.cords.lat;
         const lng = this.props.cords.lng;
-        console.log(this.props)
+       // console.log(this.props)
         return (
             <div className="mt-5">
                 <div className='current-weather'>

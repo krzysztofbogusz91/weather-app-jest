@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { config } from '../enzyme_set_up';
-import { Error } from './Error';
+import { ErrorComponent } from './ErrorComponent';
 
-describe('Error', () => {
-    const err = shallow(<Error />)
+describe('ErrorComponent', () => {
+    const err = shallow(<ErrorComponent />)
     it('should render properly', () => {
         expect(err).toMatchSnapshot()
     });

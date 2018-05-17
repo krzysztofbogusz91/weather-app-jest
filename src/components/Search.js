@@ -48,11 +48,12 @@ export class Search extends Component {
         const coord = this.props.today.length > 0 && this.props.today[0].coord
         const lat = coord ? this.props.today[0].coord.lat : 0;
         const lon = coord ? this.props.today[0].coord.lon : 0;
-        console.log(this.props)
+       // console.log(this.props)
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
                 <form action="submit">
+                   
                     <input
                         value={this.state.search}
                         onChange={this.inputChange}

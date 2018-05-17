@@ -16,7 +16,8 @@ it('should test passing wrong type=> should return default from switch', () =>{
     const state = {
         cords: {},
         weather: [],
-        today: []
+        today: [],
+        error: false
       }
     expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual(state)
 });
@@ -85,5 +86,17 @@ it('should clear forecast and weatech states', () => {
     expect( appReducer(state, {type: types.CLEAR} )).toEqual(output)
 });
 
+it('test error action', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false
+      }
+    
+    const output = {error: true}
+    
+    expect( appReducer(state, {type: types.FETCH_ERR, error: true} )).toEqual(output)
+});
 
 });

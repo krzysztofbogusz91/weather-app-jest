@@ -44,7 +44,9 @@ ShallowWrapper {
 </form>,
         <div
           className="current-weather mt-3"
-/>,
+>
+          
+</div>,
       ],
       "className": "mt-5",
     },
@@ -110,11 +112,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": null,
+          "children": Array [
+            null,
+            null,
+          ],
           "className": "current-weather mt-3",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          null,
+          null,
+        ],
         "type": "div",
       },
     ],
@@ -146,7 +154,9 @@ ShallowWrapper {
 </form>,
           <div
             className="current-weather mt-3"
-/>,
+>
+            
+</div>,
         ],
         "className": "mt-5",
       },
@@ -212,11 +222,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": null,
+            "children": Array [
+              null,
+              null,
+            ],
             "className": "current-weather mt-3",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            null,
+            null,
+          ],
           "type": "div",
         },
       ],

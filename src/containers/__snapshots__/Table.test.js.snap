@@ -79,7 +79,9 @@ ShallowWrapper {
         <tbody
           className="tbody-class"
 >
-          <tr>
+          <tr
+                    className="bg-primary text-light"
+          >
                     <th
                               colSpan="5"
                     >
@@ -297,7 +299,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <tr>
+            <tr
+              className="bg-primary text-light"
+>
               <th
                             colSpan="5"
               >
@@ -341,6 +345,7 @@ ShallowWrapper {
 >
                 2018-05-07
 </th>,
+              "className": "bg-primary text-light",
             },
             "ref": null,
             "rendered": Object {
@@ -525,7 +530,9 @@ ShallowWrapper {
           <tbody
             className="tbody-class"
 >
-            <tr>
+            <tr
+                        className="bg-primary text-light"
+            >
                         <th
                                     colSpan="5"
                         >
@@ -743,7 +750,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <tr>
+              <tr
+                className="bg-primary text-light"
+>
                 <th
                                 colSpan="5"
                 >
@@ -787,6 +796,7 @@ ShallowWrapper {
 >
                   2018-05-07
 </th>,
+                "className": "bg-primary text-light",
               },
               "ref": null,
               "rendered": Object {

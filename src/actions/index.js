@@ -41,9 +41,15 @@ export const fetchForecast = data => dispatch =>{
         .then(data => {
             dispatch({
                 type: types.FETCH_FORECAST,
-                payload: data
+                payload: data,
+                error: false
             })}
-        ).catch(err => err );
+        ).catch(err => {
+            dispatch({
+                type: types.FETCH_ERR,
+                error: true    
+            })
+        } );
 }
 
 export const fetchUser = () => dispatch =>{
