@@ -11,9 +11,11 @@ export const clearFetch = () =>{
 }
 
 export const fetchWeather = data => dispatch =>{
-  
+    
     let search = term(data);
     const url = `${urlMain}weather?${search}&appid=${API_KEY}`;
+
+
 
    return fetch(url)
         .then(res => res.json())
@@ -21,12 +23,12 @@ export const fetchWeather = data => dispatch =>{
             dispatch({
                 type: types.FETCH_WEATHER,
                 payload: data,
-                error: false
+                error: false,
             })}
         ).catch(err =>{ 
             dispatch({
                 type: types.FETCH_ERR,
-                error: true    
+                error: true,  
             })
             });
 }

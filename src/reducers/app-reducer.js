@@ -4,7 +4,7 @@ const initialState = {
     cords: {},
     weather: [],
     today: [],
-    error: false
+    error: false,
   }
 
 export default (state={...initialState}, action) => {
@@ -49,7 +49,7 @@ export default (state={...initialState}, action) => {
         case types.FETCH_ERR:
             return {
                 error: action.error
-            }         
+            }          
         default:
             return state
     }
