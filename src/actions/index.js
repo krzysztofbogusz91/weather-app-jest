@@ -21,8 +21,14 @@ export const fetchWeather = data => dispatch =>{
             dispatch({
                 type: types.FETCH_WEATHER,
                 payload: data,
+                error: false
             })}
-        ).catch(err => err);
+        ).catch(err =>{ 
+            dispatch({
+                type: types.FETCH_ERR,
+                error: true    
+            })
+            });
 }
 
 export const fetchForecast = data => dispatch =>{

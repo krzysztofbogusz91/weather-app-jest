@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchWeather,fetchForecast, clearFetch } from '../actions/index';
 import { Table } from '../containers/Table';
+import { ErrorComponent } from '../containers/ErrorComponent'
 import MapContainer from "./MapContainer";
 //TODO 
 //-- Add error handling in acitions or reducers? when code i 404
@@ -47,7 +48,7 @@ export class Search extends Component {
         const coord = this.props.today.length > 0 && this.props.today[0].coord
         const lat = coord ? this.props.today[0].coord.lat : 0;
         const lon = coord ? this.props.today[0].coord.lon : 0;
-      
+        console.log(this.props)
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
@@ -64,8 +65,8 @@ export class Search extends Component {
                 </ form>
 
                 <div className='current-weather mt-3'>
-                    
-                    {renderTable ? 
+                    {renderTable && this.props.error ? <ErrorComponent /> : null}
+                    {renderTable && !this.props.error ? 
                         <div>
                         <MapContainer lat={lat} lng={lon} />    
                         <Table 

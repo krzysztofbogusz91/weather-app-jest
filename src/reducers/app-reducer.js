@@ -3,7 +3,8 @@ import * as types from '../actions/types';
 const initialState = {
     cords: {},
     weather: [],
-    today: []
+    today: [],
+    error: false
   }
 
 export default (state={...initialState}, action) => {
@@ -14,6 +15,7 @@ export default (state={...initialState}, action) => {
         const {icon, description} = {...action.payload.weather[0]}
             return {
                 ...state,
+                error: action.error,
                 today: [{name, coord, temp, humidity, icon, description}]
             }
         case types.FETCH_FORECAST:{
@@ -43,7 +45,11 @@ export default (state={...initialState}, action) => {
                 ...state,
                 weather: [],
                 today: []
-            }     
+            }
+        case types.FETCH_ERR:
+            return {
+                error: action.error
+            }         
         default:
             return state
     }
