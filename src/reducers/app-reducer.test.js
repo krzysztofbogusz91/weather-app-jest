@@ -17,7 +17,8 @@ it('should test passing wrong type=> should return default from switch', () =>{
         cords: {},
         weather: [],
         today: [],
-        error: false
+        error: false,
+        isLoading: false
       }
     expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual(state)
 });
@@ -74,7 +75,7 @@ it('should return state with weather arr', () => {
 
 });
 
-it('should clear forecast and weatech states', () => {
+it('should clear forecast and weather states', () => {
     const state = {
         cords: {},
         weather:  ["sunshine"],

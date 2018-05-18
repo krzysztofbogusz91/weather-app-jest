@@ -2,7 +2,7 @@ import React from 'react';
 import { Current } from './Current'
 import set from '../enzyme_set_up';
 import { shallow, mount } from 'enzyme';
-import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
+import { fetchWeather, fetchUser, fetchForecast, clearFetch, pendingFetch } from '../actions/index';
 
 
 
@@ -10,7 +10,8 @@ const mockfetchWeather = jest.fn()
 const mockfetchUser = jest.fn(() => { props.cords = { cords: "cor" } })
 const mockfetchForecast = jest.fn();
 const mockClearFetch = jest.fn();
-const props = { today: [], weather: [], cords: {}, fetchUser: mockfetchUser, fetchForecast: mockfetchForecast, fetchWeather: mockfetchWeather, mockClearFetch }
+const mockPendingFetch = jest.fn();
+const props = { today: [], weather: [], cords: {}, fetchUser: mockfetchUser, fetchForecast: mockfetchForecast, fetchWeather: mockfetchWeather, mockClearFetch, pendingFetch: mockPendingFetch }
 
 describe('Current', () => {
 

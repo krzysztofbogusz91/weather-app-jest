@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWeather,fetchForecast, clearFetch } from '../actions/index';
+import { fetchWeather,fetchForecast, clearFetch, pendingFetch } from '../actions/index';
 import { Table } from '../containers/Table';
 import { ErrorComponent } from '../containers/ErrorComponent'
 import MapContainer from "./MapContainer";
+import { Loader } from '../containers/Loader';
 //TODO 
 //-- Add error handling in acitions or reducers? when code i 404
 
@@ -23,12 +24,17 @@ export class Search extends Component {
             search: e.target.value,
             renderTable: false
         })
+        
     }
 
     buttonOnClick = (e) =>{
         
         //ADD SUBMIT VALIDATION AND TESTS
         e.preventDefault()
+
+        //Show loader when data is pending
+        this.props.pendingFetch()
+        
         const cord = this.state.search;
     
         this.props.fetchForecast(cord);
@@ -45,10 +51,12 @@ export class Search extends Component {
     }
     
     render() {
-        const renderTable = this.state.renderTable;
+        const renderTable = this.state.renderTable && !this.props.isLoading;
         const coord = this.props.today.length > 0 && this.props.today[0].coord
         const lat = coord ? this.props.today[0].coord.lat : 0;
         const lon = coord ? this.props.today[0].coord.lon : 0;
+        console.log(this.props)
+        console.log(this.props.isLoading)
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
@@ -66,6 +74,7 @@ export class Search extends Component {
                 </ form>
 
                 <div className='current-weather mt-3'>
+                    { this.props.isLoading ? <Loader /> : null}
                     {renderTable && this.props.error ? <ErrorComponent /> : null}
                     {renderTable && !this.props.error ? 
                         <div>
@@ -98,4 +107,4 @@ Search.defaultProps = {
     cords: {},
 }
 
-export default connect(state => ({ ...state }), { fetchWeather, fetchForecast, clearFetch })(Search);
+export default connect(state => ({ ...state }), { fetchWeather, fetchForecast, clearFetch, pendingFetch })(Search);

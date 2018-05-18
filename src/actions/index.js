@@ -10,6 +10,13 @@ export const clearFetch = () =>{
    }
 }
 
+export const pendingFetch = () =>{
+    return {
+         type: types.FETCH_PENDING,
+         isLoading: true
+     }
+  }
+
 export const fetchWeather = data => dispatch =>{
     
     let search = term(data);
@@ -24,11 +31,13 @@ export const fetchWeather = data => dispatch =>{
                 type: types.FETCH_WEATHER,
                 payload: data,
                 error: false,
+                isLoading: false
             })}
         ).catch(err =>{ 
             dispatch({
                 type: types.FETCH_ERR,
-                error: true,  
+                error: true,
+                isLoading: false
             })
             });
 }

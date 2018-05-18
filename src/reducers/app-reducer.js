@@ -5,6 +5,7 @@ const initialState = {
     weather: [],
     today: [],
     error: false,
+    isLoading: false,
   }
 
 export default (state={...initialState}, action) => {
@@ -16,6 +17,7 @@ export default (state={...initialState}, action) => {
             return {
                 ...state,
                 error: action.error,
+                isLoading: action.isLoading,
                 today: [{name, coord, temp, humidity, icon, description}]
             }
         case types.FETCH_FORECAST:{
@@ -48,8 +50,13 @@ export default (state={...initialState}, action) => {
             }
         case types.FETCH_ERR:
             return {
-                error: action.error
-            }          
+                error: action.error,
+                isLoading: action.isLoading
+            }
+        case types.FETCH_PENDING:
+            return {
+                isLoading: action.isLoading
+            }             
         default:
             return state
     }

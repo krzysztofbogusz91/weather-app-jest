@@ -9,6 +9,7 @@ ShallowWrapper {
     fetchForecast={[Function]}
     fetchUser={[Function]}
     fetchWeather={[Function]}
+    pendingFetch={[Function]}
     today={Array []}
     weather={Array []}
 />,
@@ -115,11 +116,13 @@ ShallowWrapper {
           "children": Array [
             null,
             null,
+            null,
           ],
           "className": "current-weather mt-3",
         },
         "ref": null,
         "rendered": Array [
+          null,
           null,
           null,
         ],
@@ -225,11 +228,13 @@ ShallowWrapper {
             "children": Array [
               null,
               null,
+              null,
             ],
             "className": "current-weather mt-3",
           },
           "ref": null,
           "rendered": Array [
+            null,
             null,
             null,
           ],

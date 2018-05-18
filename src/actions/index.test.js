@@ -29,7 +29,8 @@ describe('fetchWeather', () => {
                 data: mockResponse.data
             },
             type: types.FETCH_WEATHER,
-            error: false
+            error: false,
+            isLoading: false
         }];
         let search = {lat: 54, lng: 55};
         return store.dispatch(fetchWeather(search)).then(() => {
@@ -81,7 +82,7 @@ describe('getForecast', () => {
                 data: mockResponse.data,
             },
             type: types.FETCH_FORECAST,
-            error: false
+            error: false,
         }];
         let search = {lat: 54, lng: 55}
         return store.dispatch(fetchForecast(search)).then(() => {
