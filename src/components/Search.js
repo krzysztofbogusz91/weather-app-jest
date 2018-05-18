@@ -22,8 +22,9 @@ export class Search extends Component {
         //ADD INPUT VALIDATATION AND TESTS
         this.setState({
             search: e.target.value,
-            renderTable: false
         })
+
+        this.state.search = "" ? this.setState({ renderTable:false }) : null
         
     }
 
@@ -34,7 +35,7 @@ export class Search extends Component {
 
         //Show loader when data is pending
         this.props.pendingFetch()
-        
+
         const cord = this.state.search;
     
         this.props.fetchForecast(cord);
@@ -57,6 +58,7 @@ export class Search extends Component {
         const lon = coord ? this.props.today[0].coord.lon : 0;
         console.log(this.props)
         console.log(this.props.isLoading)
+        //TODO MAP RENDER ON FIRST QUERY ISSUE
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
