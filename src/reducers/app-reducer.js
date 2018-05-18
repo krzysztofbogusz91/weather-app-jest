@@ -34,6 +34,7 @@ export default (state={...initialState}, action) => {
             return {
                 ...state,
                 weather: myData,
+                isLoading: action.isLoading,
                 //action.payload.list
             }
         }    

@@ -53,12 +53,14 @@ export const fetchForecast = data => dispatch =>{
             dispatch({
                 type: types.FETCH_FORECAST,
                 payload: data,
-                error: false
+                error: false,
+                isLoading: false
             })}
         ).catch(err => {
             dispatch({
                 type: types.FETCH_ERR,
-                error: true    
+                error: true,
+                isLoading: false  
             })
         } );
 }

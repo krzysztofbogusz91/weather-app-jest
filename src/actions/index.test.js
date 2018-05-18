@@ -83,6 +83,7 @@ describe('getForecast', () => {
             },
             type: types.FETCH_FORECAST,
             error: false,
+            isLoading: false
         }];
         let search = {lat: 54, lng: 55}
         return store.dispatch(fetchForecast(search)).then(() => {
