@@ -160,3 +160,13 @@ describe('ClearFetches', () => {
     }
     expect(actions.clearFetch()).toEqual(expected)
 });
+
+describe('updateInput', () => {
+    const term = "term";
+    const expected = {
+        type: types.INPUT_VAL,
+        payload: term
+    }
+    expect(actions.updateInput(term)).toEqual(expected)
+});
+

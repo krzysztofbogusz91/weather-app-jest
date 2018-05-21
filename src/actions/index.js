@@ -18,8 +18,6 @@ export const pendingFetch = () => {
 }
 
 export const updateInput = term =>{
-    
-    console.log('upadetInput​', );
     return {
         type: types.INPUT_VAL,
         payload: term

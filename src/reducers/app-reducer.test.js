@@ -106,4 +106,25 @@ it('test error action', () => {
     expect( appReducer(state, {type: types.FETCH_ERR, error: true} )).toEqual(output)
 });
 
+    
+it('test InputVal case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: ""
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "term"
+    }
+    
+    expect( appReducer(state, {type: types.INPUT_VAL, payload: "term" } )).toEqual(output)
+});
+
 });
