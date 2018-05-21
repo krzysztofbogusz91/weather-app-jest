@@ -29,8 +29,6 @@ export const fetchWeather = data => dispatch => {
     let search = term(data);
     const url = `${urlMain}weather?${search}&appid=${API_KEY}`;
 
-
-
     return fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -104,61 +102,8 @@ export const fetchUser = () => dispatch => {
 
 export const autoComplete = term => dispatch => {
     
-    console.log('term: ​', term );
-    const data = [
-    { city: "Katex", state: "Saki", country: "Azerbaijan" },
-
-    { city: "Texcalyacac", state: "Mexico", country: "Mexico" },
-
-    { city: "Texcoco", state: "Mexico", country: "Mexico" },
-
-    { city: "Texmelucan", state: "Puebla", country: "Mexico" },
-
-    { city: "Atexcatzingo", state: "Tlaxcala", country: "Mexico" },
-]
-
-   dispatch({
-        type: types.AUTO_COM,
-        payload: data
-    })
-    console.log('dispached')
-
-
-
-    // console.log('wywo')
-
-    // const key = `Yh5PIaZSUSmshH4egy13RmkXdUEHp1czYGmjsnWRfgrt90PVus`
-    // const url = `https://andruxnet-world-cities-v1.p.mashape.com/?query=${term}&searchby=city`;
-
-    // const myHeaders = new Headers({
-    //     "Accept": "application/json",
-    //     "X-Mashape-Key": key
-    // });
-
-    // const myInit = {
-    //     method: 'GET',
-    //     headers: myHeaders,
-    //     mode: 'cors',
-    //     cache: 'default'
-    // };
-
-    // const myRequest = new Request(url, myInit);
-
-    // console.log('build​', );
-
-    // return fetch(myRequest)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         console.log(data)
-    //         dispatch({
-    //             type: types,
-    //             payload: data
-    //         })
-    //     }
-    //     ).catch(err => err);
-}
-
-// const data = [
+//     console.log('term: ​', term );
+//     const data = [
 //     { city: "Katex", state: "Saki", country: "Azerbaijan" },
 
 //     { city: "Texcalyacac", state: "Mexico", country: "Mexico" },
@@ -169,3 +114,38 @@ export const autoComplete = term => dispatch => {
 
 //     { city: "Atexcatzingo", state: "Tlaxcala", country: "Mexico" },
 // ]
+
+//    dispatch({
+//         type: types.AUTO_COM,
+//         payload: data
+//     })
+//     console.log('dispached')
+
+
+    const key = `Yh5PIaZSUSmshH4egy13RmkXdUEHp1czYGmjsnWRfgrt90PVus`
+    const url = `https://andruxnet-world-cities-v1.p.mashape.com/?query=${term}&searchby=city`;
+
+    const myHeaders = new Headers({
+        "Accept": "application/json",
+        "X-Mashape-Key": key
+    });
+
+    const myInit = {
+        method: 'GET',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default'
+    };
+
+    const myRequest = new Request(url, myInit);
+
+    return fetch(myRequest)
+        .then(res => res.json())
+        .then(data => {
+            dispatch({
+                type: types.AUTO_COM,
+                payload: data
+            })
+        }
+        ).catch(err => err);
+}

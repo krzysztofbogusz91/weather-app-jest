@@ -127,4 +127,48 @@ it('test InputVal case', () => {
     expect( appReducer(state, {type: types.INPUT_VAL, payload: "term" } )).toEqual(output)
 });
 
+it('test AutoCom case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        auto: []
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        auto: []
+    }
+    
+    expect( appReducer(state, {type: types.AUTO_COM, payload: [] } )).toEqual(output)
+});
+
+it('test Fetch Pending case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        isLoading: false
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        isLoading: true
+    }
+    
+    expect( appReducer(state, {type: types.FETCH_PENDING, isLoading: true } )).toEqual(output)
+});
+
 });
