@@ -42,7 +42,11 @@ export const Table = (props) => {
     const list = displayList.map((a, i) => {
         //if name is converted to date only its length is always 10
         if (a.name.length === 10) {
+<<<<<<< develop
             return <tr className="bg-primary text-light" key={i + a.name}><th colSpan="5">{a.name}</th></tr>
+=======
+            return <tr key={i + a.name}><th colSpan="5">{a.name}</th></tr>
+>>>>>>> master
         }
         const name = isToday ? a.name : a.name.substring(a.name.indexOf(' '), a.name.lenght);
 
