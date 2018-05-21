@@ -3,7 +3,11 @@ import * as types from '../actions/types';
 const initialState = {
     cords: {},
     weather: [],
-    today: []
+    today: [],
+    error: false,
+    isLoading: false,
+    auto: [],
+    inputVal: "",
   }
 
 export default (state={...initialState}, action) => {
@@ -14,6 +18,8 @@ export default (state={...initialState}, action) => {
         const {icon, description} = {...action.payload.weather[0]}
             return {
                 ...state,
+                error: action.error,
+                isLoading: action.isLoading,
                 today: [{name, coord, temp, humidity, icon, description}]
             }
         case types.FETCH_FORECAST:{
@@ -30,9 +36,20 @@ export default (state={...initialState}, action) => {
             return {
                 ...state,
                 weather: myData,
+                isLoading: action.isLoading,
                 //action.payload.list
             }
-        }    
+        }
+        case types.INPUT_VAL:
+            return {
+                ...state,
+                inputVal: action.payload
+            }
+        case types.AUTO_COM:
+            return{
+                ...state,
+                auto: action.payload
+            }    
         case types.USER_CORDS:
             return{
                 ...state,
@@ -43,7 +60,18 @@ export default (state={...initialState}, action) => {
                 ...state,
                 weather: [],
                 today: []
-            }     
+            }
+        case types.FETCH_ERR:
+            return {
+                ...state,
+                error: action.error,
+                isLoading: action.isLoading
+            }
+        case types.FETCH_PENDING:
+            return {
+                ...state,
+                isLoading: action.isLoading
+            }             
         default:
             return state
     }

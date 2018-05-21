@@ -16,7 +16,11 @@ it('should test passing wrong type=> should return default from switch', () =>{
     const state = {
         cords: {},
         weather: [],
-        today: []
+        today: [],
+        error: false,
+        isLoading: false,
+        auto: [],
+        inputVal: ''
       }
     expect( appReducer(undefined,{type: "NOTYPE"}) ).toEqual(state)
 });
@@ -73,7 +77,7 @@ it('should return state with weather arr', () => {
 
 });
 
-it('should clear forecast and weatech states', () => {
+it('should clear forecast and weather states', () => {
     const state = {
         cords: {},
         weather:  ["sunshine"],
@@ -85,5 +89,86 @@ it('should clear forecast and weatech states', () => {
     expect( appReducer(state, {type: types.CLEAR} )).toEqual(output)
 });
 
+it('test error action', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: true}
+    
+    expect( appReducer(state, {type: types.FETCH_ERR, error: true} )).toEqual(output)
+});
+
+    
+it('test InputVal case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: ""
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "term"
+    }
+    
+    expect( appReducer(state, {type: types.INPUT_VAL, payload: "term" } )).toEqual(output)
+});
+
+it('test AutoCom case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        auto: []
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        auto: []
+    }
+    
+    expect( appReducer(state, {type: types.AUTO_COM, payload: [] } )).toEqual(output)
+});
+
+it('test Fetch Pending case', () => {
+    const state = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        isLoading: false
+      }
+    
+    const output = {
+        cords: {},
+        weather:  ["sunshine"],
+        today: ["sunshine"],
+        error: false,
+        inputVal: "",
+        isLoading: true
+    }
+    
+    expect( appReducer(state, {type: types.FETCH_PENDING, isLoading: true } )).toEqual(output)
+});
 
 });

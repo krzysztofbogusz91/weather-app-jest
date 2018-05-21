@@ -26,35 +26,40 @@ ShallowWrapper {
         <div>
           <form>
                     <div
-                              class="form-group"
+                              className="form-group"
                     >
                               <label
-                                        for="email"
+                                        htmlFor="email"
                               >
                                         Email address
                               </label>
                               <input
-                                        aria-describedby="emailHelp"
-                                        class="form-control"
+                                        className="form-control"
                                         id="email"
                                         placeholder="Enter email"
                                         type="email"
                               />
                     </div>
                     <div
-                              class="form-group"
+                              className="form-group"
                     >
                               <label
-                                        for="text-area"
+                                        htmlFor="text-area"
                               >
                                         Messsage
                               </label>
                               <textarea
-                                        class="form-control"
+                                        className="form-control"
                                         id="text-area"
                                         type="text"
                               />
                     </div>
+                    <button
+                              className="btn btn-primary"
+                              type="submit"
+                    >
+                              Submit
+                    </button>
           </form>
 </div>,
       ],
@@ -81,35 +86,40 @@ ShallowWrapper {
         "props": Object {
           "children": <form>
             <div
-                        class="form-group"
+                        className="form-group"
             >
                         <label
-                                    for="email"
+                                    htmlFor="email"
                         >
                                     Email address
                         </label>
                         <input
-                                    aria-describedby="emailHelp"
-                                    class="form-control"
+                                    className="form-control"
                                     id="email"
                                     placeholder="Enter email"
                                     type="email"
                         />
             </div>
             <div
-                        class="form-group"
+                        className="form-group"
             >
                         <label
-                                    for="text-area"
+                                    htmlFor="text-area"
                         >
                                     Messsage
                         </label>
                         <textarea
-                                    class="form-control"
+                                    className="form-control"
                                     id="text-area"
                                     type="text"
                         />
             </div>
+            <button
+                        className="btn btn-primary"
+                        type="submit"
+            >
+                        Submit
+            </button>
 </form>,
         },
         "ref": null,
@@ -120,35 +130,40 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                class="form-group"
+                className="form-group"
 >
                 <label
-                                for="email"
+                                htmlFor="email"
                 >
                                 Email address
                 </label>
                 <input
-                                aria-describedby="emailHelp"
-                                class="form-control"
+                                className="form-control"
                                 id="email"
                                 placeholder="Enter email"
                                 type="email"
                 />
 </div>,
               <div
-                class="form-group"
+                className="form-group"
 >
                 <label
-                                for="text-area"
+                                htmlFor="text-area"
                 >
                                 Messsage
                 </label>
                 <textarea
-                                class="form-control"
+                                className="form-control"
                                 id="text-area"
                                 type="text"
                 />
 </div>,
+              <button
+                className="btn btn-primary"
+                type="submit"
+>
+                Submit
+</button>,
             ],
           },
           "ref": null,
@@ -160,19 +175,18 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <label
-                    for="email"
+                    htmlFor="email"
 >
                     Email address
 </label>,
                   <input
-                    aria-describedby="emailHelp"
-                    class="form-control"
+                    className="form-control"
                     id="email"
                     placeholder="Enter email"
                     type="email"
 />,
                 ],
-                "class": "form-group",
+                "className": "form-group",
               },
               "ref": null,
               "rendered": Array [
@@ -182,7 +196,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Email address",
-                    "for": "email",
+                    "htmlFor": "email",
                   },
                   "ref": null,
                   "rendered": "Email address",
@@ -193,8 +207,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "aria-describedby": "emailHelp",
-                    "class": "form-control",
+                    "className": "form-control",
                     "id": "email",
                     "placeholder": "Enter email",
                     "type": "email",
@@ -213,17 +226,17 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <label
-                    for="text-area"
+                    htmlFor="text-area"
 >
                     Messsage
 </label>,
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     id="text-area"
                     type="text"
 />,
                 ],
-                "class": "form-group",
+                "className": "form-group",
               },
               "ref": null,
               "rendered": Array [
@@ -233,7 +246,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Messsage",
-                    "for": "text-area",
+                    "htmlFor": "text-area",
                   },
                   "ref": null,
                   "rendered": "Messsage",
@@ -244,7 +257,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "class": "form-control",
+                    "className": "form-control",
                     "id": "text-area",
                     "type": "text",
                   },
@@ -254,6 +267,19 @@ ShallowWrapper {
                 },
               ],
               "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "className": "btn btn-primary",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
             },
           ],
           "type": "form",
@@ -278,35 +304,40 @@ ShallowWrapper {
           <div>
             <form>
                         <div
-                                    class="form-group"
+                                    className="form-group"
                         >
                                     <label
-                                                for="email"
+                                                htmlFor="email"
                                     >
                                                 Email address
                                     </label>
                                     <input
-                                                aria-describedby="emailHelp"
-                                                class="form-control"
+                                                className="form-control"
                                                 id="email"
                                                 placeholder="Enter email"
                                                 type="email"
                                     />
                         </div>
                         <div
-                                    class="form-group"
+                                    className="form-group"
                         >
                                     <label
-                                                for="text-area"
+                                                htmlFor="text-area"
                                     >
                                                 Messsage
                                     </label>
                                     <textarea
-                                                class="form-control"
+                                                className="form-control"
                                                 id="text-area"
                                                 type="text"
                                     />
                         </div>
+                        <button
+                                    className="btn btn-primary"
+                                    type="submit"
+                        >
+                                    Submit
+                        </button>
             </form>
 </div>,
         ],
@@ -333,35 +364,40 @@ ShallowWrapper {
           "props": Object {
             "children": <form>
               <div
-                            class="form-group"
+                            className="form-group"
               >
                             <label
-                                          for="email"
+                                          htmlFor="email"
                             >
                                           Email address
                             </label>
                             <input
-                                          aria-describedby="emailHelp"
-                                          class="form-control"
+                                          className="form-control"
                                           id="email"
                                           placeholder="Enter email"
                                           type="email"
                             />
               </div>
               <div
-                            class="form-group"
+                            className="form-group"
               >
                             <label
-                                          for="text-area"
+                                          htmlFor="text-area"
                             >
                                           Messsage
                             </label>
                             <textarea
-                                          class="form-control"
+                                          className="form-control"
                                           id="text-area"
                                           type="text"
                             />
               </div>
+              <button
+                            className="btn btn-primary"
+                            type="submit"
+              >
+                            Submit
+              </button>
 </form>,
           },
           "ref": null,
@@ -372,35 +408,40 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  class="form-group"
+                  className="form-group"
 >
                   <label
-                                    for="email"
+                                    htmlFor="email"
                   >
                                     Email address
                   </label>
                   <input
-                                    aria-describedby="emailHelp"
-                                    class="form-control"
+                                    className="form-control"
                                     id="email"
                                     placeholder="Enter email"
                                     type="email"
                   />
 </div>,
                 <div
-                  class="form-group"
+                  className="form-group"
 >
                   <label
-                                    for="text-area"
+                                    htmlFor="text-area"
                   >
                                     Messsage
                   </label>
                   <textarea
-                                    class="form-control"
+                                    className="form-control"
                                     id="text-area"
                                     type="text"
                   />
 </div>,
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+>
+                  Submit
+</button>,
               ],
             },
             "ref": null,
@@ -412,19 +453,18 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <label
-                      for="email"
+                      htmlFor="email"
 >
                       Email address
 </label>,
                     <input
-                      aria-describedby="emailHelp"
-                      class="form-control"
+                      className="form-control"
                       id="email"
                       placeholder="Enter email"
                       type="email"
 />,
                   ],
-                  "class": "form-group",
+                  "className": "form-group",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -434,7 +474,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Email address",
-                      "for": "email",
+                      "htmlFor": "email",
                     },
                     "ref": null,
                     "rendered": "Email address",
@@ -445,8 +485,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "aria-describedby": "emailHelp",
-                      "class": "form-control",
+                      "className": "form-control",
                       "id": "email",
                       "placeholder": "Enter email",
                       "type": "email",
@@ -465,17 +504,17 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <label
-                      for="text-area"
+                      htmlFor="text-area"
 >
                       Messsage
 </label>,
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="text-area"
                       type="text"
 />,
                   ],
-                  "class": "form-group",
+                  "className": "form-group",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -485,7 +524,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Messsage",
-                      "for": "text-area",
+                      "htmlFor": "text-area",
                     },
                     "ref": null,
                     "rendered": "Messsage",
@@ -496,7 +535,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "class": "form-control",
+                      "className": "form-control",
                       "id": "text-area",
                       "type": "text",
                     },
@@ -506,6 +545,19 @@ ShallowWrapper {
                   },
                 ],
                 "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Submit",
+                  "className": "btn btn-primary",
+                  "type": "submit",
+                },
+                "ref": null,
+                "rendered": "Submit",
+                "type": "button",
               },
             ],
             "type": "form",

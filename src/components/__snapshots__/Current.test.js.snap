@@ -10,6 +10,7 @@ ShallowWrapper {
     fetchUser={[Function]}
     fetchWeather={[Function]}
     mockClearFetch={[Function]}
+    pendingFetch={[Function]}
     today={Array []}
     weather={Array []}
 />,
@@ -47,6 +48,7 @@ ShallowWrapper {
             lng={undefined}
 />,
           null,
+          null,
         ],
         "className": "current-weather",
       },
@@ -64,6 +66,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        null,
         null,
       ],
       "type": "div",
@@ -98,6 +101,7 @@ ShallowWrapper {
               lng={undefined}
 />,
             null,
+            null,
           ],
           "className": "current-weather",
         },
@@ -115,6 +119,7 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          null,
           null,
         ],
         "type": "div",

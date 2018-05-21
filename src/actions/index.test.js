@@ -28,7 +28,9 @@ describe('fetchWeather', () => {
             payload: {
                 data: mockResponse.data
             },
-            type: types.FETCH_WEATHER
+            type: types.FETCH_WEATHER,
+            error: false,
+            isLoading: false
         }];
         let search = {lat: 54, lng: 55};
         return store.dispatch(fetchWeather(search)).then(() => {
@@ -77,9 +79,11 @@ describe('getForecast', () => {
 
         const expected = [{
             payload: {
-                data: mockResponse.data
+                data: mockResponse.data,
             },
-            type: types.FETCH_FORECAST
+            type: types.FETCH_FORECAST,
+            error: false,
+            isLoading: false
         }];
         let search = {lat: 54, lng: 55}
         return store.dispatch(fetchForecast(search)).then(() => {
@@ -156,3 +160,13 @@ describe('ClearFetches', () => {
     }
     expect(actions.clearFetch()).toEqual(expected)
 });
+
+describe('updateInput', () => {
+    const term = "term";
+    const expected = {
+        type: types.INPUT_VAL,
+        payload: term
+    }
+    expect(actions.updateInput(term)).toEqual(expected)
+});
+

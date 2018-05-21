@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWeather, fetchUser, fetchForecast, clearFetch } from '../actions/index';
+import { fetchWeather, fetchUser, fetchForecast, clearFetch, pendingFetch } from '../actions/index';
 import { Table } from '../containers/Table';
 import MapContainer from "./MapContainer";
+import { Loader } from './../containers/Loader';
 
 
 
 export class Current extends Component {  
     setAll = async () => {
-        //TODO ADD ERROR HANDLING ON FETCH METHODS => AVOID ERRORS IN THE CONSOLE 
+        this.props.pendingFetch()
+
         await this.props.fetchUser();
         const cord = this.props.cords;
         await this.props.fetchForecast(cord);
         await this.props.fetchWeather(cord);
+   
     }
 
 
@@ -29,15 +32,17 @@ export class Current extends Component {
     componentWillUnmount() {
         this.props.clearFetch();
     }
+
+    //TODO MAP RENDER ON FIRST QUERY ISSUE WHEN AFTER TERNARY EXP
     render() {
-        const renderTable = this.props.weather.length > 0 && this.props.today.length > 0;
+        const renderTable = this.props.weather.length > 0 && this.props.today.length > 0 && !this.props.isLoading;
         const lat = this.props.cords.lat;
         const lng = this.props.cords.lng;
-
         return (
             <div className="mt-5">
                 <div className='current-weather'>
-                <MapContainer lat={lat} lng={lng} />  
+                <MapContainer lat={lat} lng={lng} />
+                {this.props.isLoading ? <Loader /> : null} 
                     {renderTable ? 
                         <div>
                         <Table 
@@ -69,4 +74,4 @@ Current.defaultProps = {
     cords: {},
 }
 
-export default connect(state => ({ ...state }), { fetchWeather, fetchUser, fetchForecast,clearFetch })(Current);
+export default connect(state => ({ ...state }), { fetchWeather, fetchUser, fetchForecast,clearFetch, pendingFetch })(Current);
