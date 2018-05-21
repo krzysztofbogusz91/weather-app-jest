@@ -12,8 +12,6 @@ export class Current extends Component {
     setAll = async () => {
         this.props.pendingFetch()
 
-        //TODO ADD ERROR HANDLING ON FETCH METHODS => AVOID ERRORS IN THE CONSOLE 
-        
         await this.props.fetchUser();
         const cord = this.props.cords;
         await this.props.fetchForecast(cord);
@@ -34,6 +32,8 @@ export class Current extends Component {
     componentWillUnmount() {
         this.props.clearFetch();
     }
+
+    //TODO MAP RENDER ON FIRST QUERY ISSUE WHEN AFTER TERNARY EXP
     render() {
         const renderTable = this.props.weather.length > 0 && this.props.today.length > 0 && !this.props.isLoading;
         const lat = this.props.cords.lat;

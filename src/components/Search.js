@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchWeather,fetchForecast, clearFetch, pendingFetch } from '../actions/index';
+import { fetchWeather,fetchForecast, clearFetch, pendingFetch, autoComplete, updateInput } from '../actions/index';
 import { Table } from '../containers/Table';
 import { ErrorComponent } from '../containers/ErrorComponent'
 import MapContainer from "./MapContainer";
 import { Loader } from '../containers/Loader';
-//TODO 
-//-- Add error handling in acitions or reducers? when code i 404
+import AutoCom from './AutoCom';
+
 
 export class Search extends Component {
     constructor(props) {
@@ -19,12 +19,16 @@ export class Search extends Component {
     }
 
     inputChange = (e) => {
-        //ADD INPUT VALIDATATION AND TESTS
-        this.setState({
-            search: e.target.value,
-        })
 
-        this.state.search = "" ? this.setState({ renderTable:false }) : null
+        if(this.props.inputVal.length === 3){
+            this.props.autoComplete(this.state.search);
+        }
+
+        this.props.updateInput(e.target.value);
+
+      
+
+        this.props.inputVal.length === 0 ? this.setState({ renderTable:false }) : null
         
     }
 
@@ -32,11 +36,11 @@ export class Search extends Component {
         
         //ADD SUBMIT VALIDATION AND TESTS
         e.preventDefault()
-
+        
         //Show loader when data is pending
         this.props.pendingFetch()
 
-        const cord = this.state.search;
+        const cord = this.props.inputVal;
     
         this.props.fetchForecast(cord);
         this.props.fetchWeather(cord);
@@ -47,7 +51,7 @@ export class Search extends Component {
     }
 
     componentWillUnmount() {
-        //prevent issue of data disply afeter route change
+        //prevents issue of data disply afeter route change
         this.props.clearFetch();
     }
     
@@ -56,20 +60,23 @@ export class Search extends Component {
         const coord = this.props.today.length > 0 && this.props.today[0].coord
         const lat = coord ? this.props.today[0].coord.lat : 0;
         const lon = coord ? this.props.today[0].coord.lon : 0;
-        console.log(this.props)
-        console.log(this.props.isLoading)
-        //TODO MAP RENDER ON FIRST QUERY ISSUE
+       //  console.log(this.props)
+        // console.log(this.props.inputVal)
+        // console.log('​Search -> render -> ', this.props.auto );
+        // console.log(this.props.isLoading)
+        
+        //TODO MAP RENDERS ON FIRST QUERY ISSUE
         //TODO => WHEN TYPING IN INPUT SHOW TOOLTIP ASKING TO PASS COUNTRY CODE AFTER COMA, or even on clik pass chosen one
         return (
             <div className="mt-5">
                 <form action="submit">
                    
                     <input
-                        value={this.state.search}
+                        value={this.props.inputVal}
                         onChange={this.inputChange}
                         type="text"
                         className='search-fetch form-control' />
-                        
+                        {this.props.auto.length > 0 ? <AutoCom /> : null}
                         <button type="submit" className="mt-2 btn btn-info form-control search" onClick={this.buttonOnClick}>
                             Search
                         </button>
@@ -109,4 +116,4 @@ Search.defaultProps = {
     cords: {},
 }
 
-export default connect(state => ({ ...state }), { fetchWeather, fetchForecast, clearFetch, pendingFetch })(Search);
+export default connect(state => ({ ...state }), { fetchWeather, fetchForecast, clearFetch, pendingFetch, autoComplete, updateInput })(Search);

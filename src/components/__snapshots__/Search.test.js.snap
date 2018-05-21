@@ -5,12 +5,15 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Search
+    auto={Array []}
     cords={Object {}}
     fetchForecast={[Function]}
     fetchUser={[Function]}
     fetchWeather={[Function]}
+    inputVal="Lond"
     pendingFetch={[Function]}
     today={Array []}
+    updateInput={[Function]}
     weather={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -33,7 +36,7 @@ ShallowWrapper {
                     className="search-fetch form-control"
                     onChange={[Function]}
                     type="text"
-                    value=""
+                    value="Lond"
           />
           <button
                     className="mt-2 btn btn-info form-control search"
@@ -64,8 +67,9 @@ ShallowWrapper {
               className="search-fetch form-control"
               onChange={[Function]}
               type="text"
-              value=""
+              value="Lond"
 />,
+            null,
             <button
               className="mt-2 btn btn-info form-control search"
               onClick={[Function]}
@@ -85,12 +89,13 @@ ShallowWrapper {
               "className": "search-fetch form-control",
               "onChange": [Function],
               "type": "text",
-              "value": "",
+              "value": "Lond",
             },
             "ref": null,
             "rendered": null,
             "type": "input",
           },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -145,7 +150,7 @@ ShallowWrapper {
                         className="search-fetch form-control"
                         onChange={[Function]}
                         type="text"
-                        value=""
+                        value="Lond"
             />
             <button
                         className="mt-2 btn btn-info form-control search"
@@ -176,8 +181,9 @@ ShallowWrapper {
                 className="search-fetch form-control"
                 onChange={[Function]}
                 type="text"
-                value=""
+                value="Lond"
 />,
+              null,
               <button
                 className="mt-2 btn btn-info form-control search"
                 onClick={[Function]}
@@ -197,12 +203,13 @@ ShallowWrapper {
                 "className": "search-fetch form-control",
                 "onChange": [Function],
                 "type": "text",
-                "value": "",
+                "value": "Lond",
               },
               "ref": null,
               "rendered": null,
               "type": "input",
             },
+            null,
             Object {
               "instance": null,
               "key": undefined,

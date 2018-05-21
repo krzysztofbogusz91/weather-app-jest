@@ -6,6 +6,8 @@ const initialState = {
     today: [],
     error: false,
     isLoading: false,
+    auto: [],
+    inputVal: "",
   }
 
 export default (state={...initialState}, action) => {
@@ -37,7 +39,17 @@ export default (state={...initialState}, action) => {
                 isLoading: action.isLoading,
                 //action.payload.list
             }
-        }    
+        }
+        case types.INPUT_VAL:
+            return {
+                ...state,
+                inputVal: action.payload
+            }
+        case types.AUTO_COM:
+            return{
+                ...state,
+                auto: action.payload
+            }    
         case types.USER_CORDS:
             return{
                 ...state,
@@ -51,11 +63,13 @@ export default (state={...initialState}, action) => {
             }
         case types.FETCH_ERR:
             return {
+                ...state,
                 error: action.error,
                 isLoading: action.isLoading
             }
         case types.FETCH_PENDING:
             return {
+                ...state,
                 isLoading: action.isLoading
             }             
         default:
